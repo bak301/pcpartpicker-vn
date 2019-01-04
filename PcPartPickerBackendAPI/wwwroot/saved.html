@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script language="javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="pcpp-header">
+                <a href="/">
+                    <h1>PCPartPicker</h1>
+                </a>
+                <ul class="user-nav">
+
+                    Welcome
+                    <li><a href="/user/ngocoai/preferences/">ngocoai</a></li>
+
+                    <li class="user-messages"><a href="/user/ngocoai/messages/unread/"><img src="image/mail-empty-icon.png"
+                                alt="messages">0</a></li>
+                    <li><a href="/user/ngocoai/inventory/">Inventory</a></li>
+                    <li><a href="/user/ngocoai/favorites/">Favorite Parts</a></li>
+                    <li><a href="/user/ngocoai/saved/">Saved Part Lists</a></li>
+                    <li><a href="/accounts/logout/">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="primary-nav">
+                        <a href="systembuild.html" class="nav-build"><span>Start a</span> System Build</a>
+                        <a href="/guide/" class="nav-guides"><span>View the</span> Build Guides</a>
+                        <a href="/builds/" class="nav-builds"><span>See all</span> Completed Builds</a>
+                        <a id="browse-parts-button" href="#" class="nav-parts"><span>Browse by</span>
+                            Individual Parts<span class="nav-dropdown"></span></a>
+                            
+                    </div>
+                    <div class="secondary-nav">
+                        <div class="sub-links">
+                            <a href="/products/pricedrop/">Price Drops</a><a href="/trends/">Price Trends</a><a href="/forums/">Forums</a><a
+                                href="/blog/">Blog</a>
+                        </div>
+                        <div class="search"><a href="/search/" class="search-parts"></a></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <div class="saved-part-lists user">
+            <div class="general-hero tabnav-hero">
+                <div class="container">
+                    <div class="title">
+                        <div class="avatar-username">
+                            <a href="/user/ngocoai/"><img src="image/pcpp-default-avatar.png" class="user-thumb-lg"></a>
+
+
+                            <div>
+                                <h1>Saved Part Lists</h1>
+                                <span>ngocoai</span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <div class="container">
+                    <div class="column-wrapper">
+                        <div class="left-column">
+                            <div class="block">
+                                <h2>Part Lists</h2>
+                                <ul id="saveobj_toc" class="list-toc ui-sortable">
+
+                                    <li id="saveobj_wkzjyc" class="list-movable">
+                                        <img src="image/drag-handle.png" />
+                                        <a href="#view=wkzjyc">My Custom Build</a>
+                                    </li>
+
+                                    <li id="saveobj_8bcjyc" class="list-movable list-active">
+                                        <img src="image/drag-handle.png" />
+                                        <a href="#view=8bcjyc">My Custom Build</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right-column">
+                            <div class="block">
+                                <div id="animation_anchor"></div>
+                                <div id="partlist_render">
+                                    <h2>
+                                        <a href="/user/ngocoai/saved/8bcjyc">My Custom Build</a>
+                                        <span class="header-actions">
+                                            <a href="#" class="btn-mds" onclick="pp_partlist_edit('7jw6Gf');return false;">Edit
+                                                Part List</a>
+                                            <a href="/user/ngocoai/saved/edit/?saved=8bcjyc" class="btn-mds">Edit
+                                                Details</a>
+                                            <a href="#" onclick="delete_saved_confirm(16845152); return false;" class="btn-mds delete-btn">Delete</a>
+                                        </span>
+                                    </h2>
+                                    <div class="block">
+                                        <div class="block part-list">
+                                            <table class="manual-zebra">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="tl">Component</th>
+                                                        <th></th>
+                                                        <th class="tl">Selection</th>
+
+                                                        <th class="tr">Price</th>
+
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr class="last zebra">
+                                                        <td class="component-type tl"><a href="/products/cpu/">CPU</a></td>
+                                                        <td class="component-image"><a href="/product/sxDzK8/intel-core-i7-8700k-37ghz-6-core-processor-bx80684i78700k"
+                                                                class="image-wrapper "><img src="https://images-eu.ssl-images-amazon.com/images/I/51guGHeu46L.jpg"
+                                                                    class=""></a></td>
+                                                        <td class="component-name tl">
+                                                            <div>
+
+                                                                <a href="/product/sxDzK8/intel-core-i7-8700k-37ghz-6-core-processor-bx80684i78700k">Intel
+                                                                    - Core i7-8700K 3.7 GHz 6-Core Processor</a>
+                                                            </div>
+                                                        </td>
+                                                        <td class="tr price nowrap"><a href="/mr/amazon/sxDzK8" rel="nofollow"
+                                                                target="_blank">$339.99</a></td>
+                                                        <td class="nowrap">
+
+                                                            <a href="/mr/amazon/sxDzK8" class="btn-mds" rel="nofollow"
+                                                                target="_blank">Buy</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="last">
+                                                        <td class="component-type tl"><a href="/products/cpu-cooler/">CPU
+                                                                Cooler</a></td>
+                                                        <td class="component-image"><a href="/product/hmtCmG/cooler-master-cpu-cooler-rr212e20pkr2"
+                                                                class="image-wrapper "><img src="//cdn.pcpartpicker.com/static/forever/images/product/ddea57de9797549e80d05fb3acb2e83d.med.256p.jpg"
+                                                                    class=""></a></td>
+                                                        <td class="component-name tl">
+                                                            <div>
+
+                                                                <a href="/product/hmtCmG/cooler-master-cpu-cooler-rr212e20pkr2">Cooler
+                                                                    Master - Hyper 212 EVO 82.9 CFM Sleeve Bearing CPU
+                                                                    Cooler</a>
+                                                            </div>
+                                                        </td>
+                                                        <td class="tr price nowrap"><a href="/mr/outletpc/hmtCmG" rel="nofollow"
+                                                                target="_blank">$27.89</a></td>
+                                                        <td class="nowrap">
+                                                            <a href="/mr/outletpc/hmtCmG" class="btn-mds" rel="nofollow"
+                                                                target="_blank">Buy</a>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="last zebra">
+                                                        <td class="component-type tl"><a href="/products/motherboard/">Motherboard</a></td>
+                                                        <td class="component-image"><a href="/product/8sRFf7/asus-rog-strix-z370-e-gaming-atx-lga1151-motherboard-strix-z370-e-gaming"
+                                                                class="image-wrapper "><img src="//cdn.pcpartpicker.com/static/forever/images/product/6a4a5f429b21304f2f8975cc6e49635d.256p.jpg"
+                                                                    class=""></a></td>
+                                                        <td class="component-name tl">
+                                                            <div>
+                                                                <a href="/product/8sRFf7/asus-rog-strix-z370-e-gaming-atx-lga1151-motherboard-strix-z370-e-gaming">Asus
+                                                                    - ROG STRIX Z370-E GAMING ATX LGA1151 Motherboard</a>
+                                                            </div>
+                                                        </td>
+                                                        <td class="tr price nowrap"><a href="/mr/outletpc/8sRFf7" rel="nofollow"
+                                                                target="_blank">$299.89</a></td>
+                                                        <td class="nowrap">
+                                                            <a href="/mr/outletpc/8sRFf7" class="btn-mds" rel="nofollow"
+                                                                target="_blank">Buy</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="total-price part-list-totals">
+                                                        <td colspan="3">Total:</td>
+                                                        <td class="tr nowrap">$667.77</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="drop drop1">
+        <div id="browse-parts-tray-container">
+          <div class="container">
+            <div class="browse-parts-tray">
+              <div class="parts-tray-block-col core-parts">
+                <div>
+                  <a href="/products/cpu" class="parts-tray-block parts-tray-heading"><img src="image/nav-cpu.png" alt="CPU" />CPU</a>
+                  <a href="/products/cpu-cooler" class="parts-tray-block parts-tray-heading"><img src="image/nav-cpucooler.png"
+                      alt="CPU Cooler" />CPU Cooler</a>
+                  <a href="/products/motherboard" class="parts-tray-block parts-tray-heading"><img src="image/nav-motherboard.png"
+                      alt="Motherboard" />Motherboard</a>
+                  <a href="/products/memory" class="parts-tray-block parts-tray-heading"><img src="image/nav-memory.png"
+                      alt="Memory" />Memory</a>
+                </div>
+                <div>
+                  <a href="/products/storage" class="parts-tray-block parts-tray-heading"><img src="image/nav-ssd.png"
+                      alt="Storage" />Storage</a>
+                  <a href="/products/gpu" class="parts-tray-block parts-tray-heading"><img src="image/nav-videocard.png"
+                      alt="Video Card" />Video Card</a>
+                  <a href="/products/powersupply" class="parts-tray-block parts-tray-heading"><img src="image/nav-powersupply.png"
+                      alt="Power Supply" />Power Supply</a>
+                  <a href="/products/pccase" class="parts-tray-block parts-tray-heading"><img src="image/nav-case.png"
+                      alt="Case" />Case</a>
+                </div>
+              </div>
+              <div class="parts-tray-list-col parts-two">
+                <ul>
+                  <li class="parts-tray-heading">Cooling</li>
+                  <li><a href="/products/pccase-fan">Case Fans</a></li>
+                  <li><a href="/products/fan-controller">Fan Controllers</a></li>
+                  <li><a href="/products/thermal-paste">Thermal Compound</a></li>
+                </ul>
+                <ul>
+                  <li class="parts-tray-heading">Drives</li>
+                  <li><a href="/products/optical-drive">Optical Drives</a></li>
+                </ul>
+                <ul>
+                  <li class="parts-tray-heading">Expansion</li>
+                  <li><a href="/products/sound-card">Sound Cards</a></li>
+                  <li><a href="/products/wired-network-card">Wired Networking</a></li>
+                  <li><a href="/products/wireless-network-card">Wireless Networking</a></li>
+                </ul>
+              </div>
+              <div class="parts-tray-list-col parts-three">
+                <ul>
+                  <li class="parts-tray-heading">Displays</li>
+                  <li><a href="/products/monitor">Monitors</a></li>
+                </ul>
+                <ul>
+                  <li class="parts-tray-heading">External Storage</li>
+                  <li><a href="/products/external-hard-drive">External Hard Drives</a></li>
+                </ul>
+                <ul>
+                  <li class="parts-tray-heading">Peripherals</li>
+                  <li><a href="/products/headphones">Headphones</a></li>
+                  <li><a href="/products/keyboard">Keyboards</a></li>
+                  <li><a href="/products/mouse">Mice</a></li>
+                  <li><a href="/products/speakers">Speakers</a></li>
+                  <li><a href="/products/ups">Uninterruptible Power Supplies</a></li>
+                </ul>
+              </div>
+              <div class="parts-tray-list-col parts-three">
+                <ul>
+                  <li class="parts-tray-heading">Software</li>
+                  <li><a href="/products/software/#W=1">Antivirus</a></li>
+                  <li><a href="/products/software/#W=8">Audio &amp; Video</a></li>
+                  <li><a href="/products/software/#W=2">Backup</a></li>
+                  <li><a href="/products/software/#W=3">Design &amp; Illustration</a></li>
+                  <li><a href="/products/software/#W=5">Internet Security</a></li>
+                  <li><a href="/products/software/#W=7">Office &amp; Productivity</a></li>
+                  <li><a href="/products/os">Operating Systems</a></li>
+                  <li><a href="/products/software/#W=6">Photography</a></li>
+                </ul>
+              </div>
+              <div class="parts-tray-list-col parts-four">
+              </div>
+              <div class="parts-tray-col-clear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <footer class="modal-footer">
+        <div class="container">
+            <div class="footer-branding">
+                <div class="copyright-notice">&copy;2018 PCPartPicker, LLC. All rights reserved.</div>
+                <div class="switch-to-mobile"><a href="?flavor=mobile">Switch to Mobile Version</a></div>
+
+
+            </div>
+            <ul class="footer-nav">
+                <h4>Sections</h4>
+                <li><a href="/list/">System Builds</a></li>
+                <li><a href="/guide/">Build Guides</a></li>
+                <li><a href="/builds/">Completed Builds</a></li>
+                <li><a href="/products/">Individual Parts</a></li>
+            </ul>
+            <ul class="footer-nav">
+                <h4>PCPP</h4>
+                <li><a href="/forums/">Forums</a></li>
+                <li><a href="/products/pricedrop/">Price Drops</a></li>
+                <li><a href="/trends/">Price Trends</a></li>
+                <li><a href="/blog/">PCPP Blog</a></li>
+            </ul>
+            <ul class="footer-nav">
+                <h4>PCPP</h4>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact &amp; Imprint</a></li>
+                <li><a href="/tos/">Terms of Service</a></li>
+                <li><a href="/code-of-conduct/">User Code of Conduct</a></li>
+                <li><a href="/code-of-conduct/industry-affiliate/">Industry Code of Conduct</a></li>
+                <li><a href="/privacy/">Privacy Policy</a></li>
+                <li><a href="/disclosure/">Disclosure</a></li>
+            </ul>
+            <ul class="footer-nav">
+                <h4>Elsewhere</h4>
+                <li><a href="https://discord.gg/pcpartpicker">Discord</a></li>
+                <li><a href="https://www.facebook.com/pcpartpicker">Facebook</a></li>
+                <li><a href="https://instagram.com/pcpartpicker">Instagram</a></li>
+                <li><a href="https://twitch.tv/pcpartpicker">Twitch</a></li>
+                <li><a href="https://twitter.com/pcpartpicker">Twitter</a></li>
+                <li><a href="https://www.youtube.com/user/pcpartpicker">YouTube</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/custom/app.js">
+    
+    </script>
+    
+</body>
+
+</html>

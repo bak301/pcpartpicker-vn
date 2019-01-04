@@ -1,0 +1,634 @@
+﻿<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+        <title>System Build</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+              <div class="pcpp-header">
+                <a href="/"><h1>PCPartPicker</h1></a>
+                <ul class="user-nav">
+        
+                  <li><a href="/accounts/login">Log In</a></li>
+                  <li><a href="/accounts/register">Register</a></li>
+        
+                </ul>
+              </div>
+            </div>
+        
+            <nav>
+              <div class="container">
+                <div class="nav-wrapper">
+                  <div class="primary-nav">
+                    <a href="/build" class="nav-build"><span>Make a</span> System Build</a>
+                    <a href="/buildGuides.html" class="nav-guides"><span>View the</span> Build Guides</a>
+                    <a href="/buildGuides.html" class="nav-builds"><span>See all</span> Completed Builds</a>
+                    <a id="browse-parts-button" href="#" class="nav-parts"><span>Browse by</span>
+                        Individual Parts<span class="nav-dropdown"></span></a>
+                   </div>
+        
+                  <div class="secondary-nav">
+                    <div class="sub-links">
+                      <a href="/products/pricedrop">Price Drops</a><a href="/trends">Price Trends</a><a href="/forums">Forums</a><a href="/blog">Blog</a>
+                    </div>
+                    <div class="search"><a href="/search" class="search-parts"></a></div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </header>
+        
+        <div>
+            <div class="system-build user">
+                <div class="hero tabnav-hero">
+                    <div class="container">
+                        <div class="title">
+                            <h1>
+                                Current Part List
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-bar-wrapper">
+                    <div class="container">
+                        <div class="full-column">
+                            <div class="part-list-action-bar">
+                                <div class="part-list-empty-tip">
+                                    Not sure where to start?  Check out our <a href="/guide">build guides</a>!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="container">
+                        <div class="full-column">
+                            <div class="block">
+                                <div class="block part-list">
+                                    <div id="part-list-compat-wattage">
+                                        <p class="compat-message">
+                                            <span>Compability check: </span>
+
+                                        </p>
+                                    </div>
+                                    <table class="manual-zebra">
+                                        <thead>
+                                            <tr>
+                                                <th class="tl">Component</th>
+                                                <th></th>
+                                                <th class="tl">Selection</th>
+                                                <th class="tl">Price</th>
+                                                <th class="tl">Merchant</th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="last cpu">
+                                                <td class="component-type tl"><a href="/products/cpu">CPU</a></td>
+                                                <td></td>
+                                                <td><a href="/products/cpu" class="btn-mds">Choose A CPU</a></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="last zebra motherboard">
+                                                <td class="component-type tl"><a href="/products/motherboard">Motherboard</a></td>
+                                                <td></td>
+                                                <td><a href="/products/motherboard" class="btn-mds">Choose A Motherboard</a></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="last memory">
+                                                <td class="component-type tl"><a href="/products/memory">Memory</a></td>
+                                                <td></td>
+                                                <td><a href="/products/memory" class="btn-mds">Choose Memory</a></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="last zebra storage">
+                                                <td class="component-type tl"><a href="/products/storage">Storage</a></td>
+                                                <td></td>
+                                                <td><a href="/products/storage" class="btn-mds">Choose Storage</a></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="last gpu">
+                                                <td class="component-type tl"><a href="/products/gpu">Video Card</a></td>
+                                                <td></td>
+                                                <td><a href="/products/gpu" class="btn-mds">Choose A Video Card</a></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="last zebra pccase">
+                                                <td class="component-type tl"><a href="/products/pccase">Case</a></td>
+                                                <td></td>
+                                                <td><a href="/products/pccase" class="btn-mds">Choose A Case</a></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="last powersupply">
+                                                <td class="component-type tl"><a href="/products/powersupply">Power Supply</a></td>
+                                                <td></td>
+                                                <td><a href="/products/powersupply" class="btn-mds">Choose A Power Supply</a></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="last zerbra resume">
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class='total-price'></td>
+                                                <td><a class='btn-mds' href='/order'>Buy All</a></td>
+                                            </tr>
+                                        
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='hidden-dialog'><div id="flag_incompat_dialog">
+                    <div>
+                        <div>Reason:</div>
+                        <div><textarea id="flag_incompat_comment"></textarea></div>
+                    </div>
+                    <div class="form-actions">
+                        <input type="submit" value="Submit" id="flag_incompat_submit" />
+                        <input type="button" value="Cancel" id="flag_incompat_cancel" />
+                    </div>
+                </div></div>
+            <div class='hidden-dialog'>
+                <div id="explain_wattage_dialog">
+                    <div><b>Note:</b> Wattages are estimates only.  Actual power draw may differ from listed values.</div>
+                    <table id="explain_wattage_table">
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+
+                                <th class="tc">Estimated Wattage</th>
+
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <td>Total:</td>
+
+                                <td class="tc">0W - 0W</td>
+
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class='hidden-dialog'>
+                <div id="markup_dialog">
+                    <div>
+                        <div>
+                            <ul id="markup_merchant_select">
+                                Show Prices From:
+                                <li><input type="radio" id="markup_merchant_all" name="markup_merchants" value="all" /> <label for="markup_merchant_all">All Merchants</label></li>
+                                <li><input type="radio" id="markup_merchant_preferred" name="markup_merchants" value="preferred" checked="checked" /> <label for="markup_merchant_preferred">Your Preferred Merchant List</label></li>
+                                <li><input type="radio" id="markup_merchant_single" name="markup_merchants" value="single" /> <label for="markup_merchant_single">Single Merchant: </label>
+                                    <select name="markup_single_merchant" id="markup_single_merchant" disabled="disabled">
+                                        <option value="64" selected="selected">Adorama</option><option value="2" >Amazon</option><option value="63" >B&amp;H</option><option value="177" >Belkin</option><option value="161" >Corsair</option><option value="31" >Dell</option><option value="76" >Dell Small Business</option><option value="108" >Harman Kardon</option><option value="187" >In Win</option><option value="186" >Mnpctech</option><option value="176" >ModMyMods</option><option value="138" >Monoprice</option><option value="158" >My Choice Software</option><option value="134" >NZXT</option><option value="6" >Newegg</option><option value="210" >Newegg Business</option><option value="162" >Newegg Marketplace</option><option value="145" >Other World Computing</option><option value="86" >OutletPC</option><option value="68" >PCM</option><option value="154" >Razer</option><option value="183" >Samsung</option><option value="173" >SteelSeries</option><option value="28" >SuperBiiz</option><option value="60" >Target</option><option value="232" >Trusted Tech Team</option><option value="58" >Walmart</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <textarea id="markup_text" rows="8"></textarea>
+                </div>
+            </div>
+
+            <div class='hidden-dialog'>
+                <div id="change_history_dialog">
+
+                </div>
+            </div>
+
+
+            <div class='hidden-dialog'>
+                <div id="upp_dialog">
+                    <div id="upp_dialog_auto_fetch">
+                        <p id="info">Enter a link to a manufacturer or retailer's product page and we'll attempt to automatically create this product and flag it for entry into our product database. You may also create a product manually if you'd prefer or if no product can be generated automatically.</p>
+                        <div>
+                            <label for="add_custom_url">Enter Part URL:<span id="upp_dialog_auto_fetch_error"></span></label>
+                        </div>
+                        <div>
+                            <form id="upp_add_custom_form">
+                                <input name="url" type="text" maxlength="4096" placeholder="Retailer or Manufacturer URL" />
+                                <input type="submit" value="Create Part" />
+                            </form>
+                        </div>
+                    </div>
+                    <div id="upp_dialog_auto_fetch_spinner">
+                        <div class="loading-container">
+                            <div class="loading-cubes" id="loading_animation_div">
+                                <div class="cube box1"></div>
+                                <div class="cube box2"></div>
+                                <div class="cube box3"></div>
+                                <div class="cube box4"></div>
+                                <div class="cube-shadows">
+                                    <div class="shadow box1"></div>
+                                    <div class="shadow box2"></div>
+                                    <div class="shadow box3"></div>
+                                    <div class="shadow box4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="upp_dialog_auto_fetch_result"></div>
+
+                    <div id="upp_dialog_manual_fetch">
+                        <div>
+                            (or)
+                        </div>
+                        <div class="form-actions">
+                            <a href="/accounts/login">Log in</a> to manually create a part.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class='hidden-dialog'>
+                <div id="price_dialog">
+                    <div>
+                        <form action="/qapi/partlist/edit_price" method="post"><input type='hidden' name='csrfmiddlewaretoken' value='xCftgznkB2PeNRRq8Tf1Oqs8XEwKCrIzBaClXnKsCWxLQKu1x03eRNqh2g4E3qD7' />
+                            <input id="change_price_identifier" type="hidden" name="identifier" value=""/>
+                            <div>
+                                <ul id="change_price_select">
+                                    <li><input type="radio" id="change_price_preferred" name="mode" value="preferred" checked="checked"/> <label for="change_price_preferred">Use Current Lowest Price From Your <a href="/user_r/preferences">Preferred Merchants</a></li>
+                                    <li><input type="radio" id="change_price_merchant" name="mode" value="merchant" /> <label for="change_price_merchant">Use Current Price From Specific Merchant</label>:
+                                        <select name="merchant_id" id="change_price_merchant_select" disabled="disabled">
+
+
+                                            <option value="64">Adorama</option>
+
+                                            <option value="2">Amazon</option>
+
+                                            <option value="63">B&amp;H</option>
+
+                                            <option value="177">Belkin</option>
+
+                                            <option value="161">Corsair</option>
+
+                                            <option value="31">Dell</option>
+
+                                            <option value="76">Dell Small Business</option>
+
+                                            <option value="108">Harman Kardon</option>
+
+                                            <option value="187">In Win</option>
+
+                                            <option value="186">Mnpctech</option>
+
+                                            <option value="176">ModMyMods</option>
+
+                                            <option value="138">Monoprice</option>
+
+                                            <option value="158">My Choice Software</option>
+
+                                            <option value="134">NZXT</option>
+
+                                            <option value="6">Newegg</option>
+
+                                            <option value="210">Newegg Business</option>
+
+                                            <option value="162">Newegg Marketplace</option>
+
+                                            <option value="145">Other World Computing</option>
+
+                                            <option value="86">OutletPC</option>
+
+                                            <option value="68">PCM</option>
+
+                                            <option value="154">Razer</option>
+
+                                            <option value="183">Samsung</option>
+
+                                            <option value="173">SteelSeries</option>
+
+                                            <option value="28">SuperBiiz</option>
+
+                                            <option value="60">Target</option>
+
+                                            <option value="232">Trusted Tech Team</option>
+
+                                            <option value="58">Walmart</option>
+
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <div class="price-inventory-options">
+                                            <input type="radio" id="change_price_inventory" name="mode" value="inventory"/> <label for="change_price_inventory">Import Purchase Price From Your <a href="/user_r/inventory">Inventory</a></label>:
+                                            <select name="inventory_id" id="change_price_inventory_select" disabled="disabled"></select>
+                                        </div>
+                                    </li>
+                                    <li><input type="radio" id="change_price_manual" name="mode" value="manual" /> <label for="change_price_manual">Manually Enter Price</label>
+                                        <div class="price-manual-options">
+                                            $ <input id="change_price_custom_price" name="custom_price" type="text" maxlength="32" value="0.00"/>
+                                            <div><input id="price_manual_purchased" type="checkbox" name="purchased"> <label for="price_manual_purchased">Mark As Purchased</label></div>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form-actions"><input type="submit" id="change_price_submit" value="Save Part Price Setting"/><input id="change_price_cancel" type="button" value="Cancel"/></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="drop drop1">
+                <div id="browse-parts-tray-container">
+                  <div class="container">
+                    <div class="browse-parts-tray">
+                      <div class="parts-tray-block-col core-parts">
+                        <div>
+                          <a href="/products/cpu" class="parts-tray-block parts-tray-heading"><img src="image/nav-cpu.png" alt="CPU" />CPU</a>
+                          <a href="/products/cpu-cooler" class="parts-tray-block parts-tray-heading"><img src="image/nav-cpucooler.png"
+                              alt="CPU Cooler" />CPU Cooler</a>
+                          <a href="/products/motherboard" class="parts-tray-block parts-tray-heading"><img src="image/nav-motherboard.png"
+                              alt="Motherboard" />Motherboard</a>
+                          <a href="/products/memory" class="parts-tray-block parts-tray-heading"><img src="image/nav-memory.png"
+                              alt="Memory" />Memory</a>
+                        </div>
+                        <div>
+                          <a href="/products/storage" class="parts-tray-block parts-tray-heading"><img src="image/nav-ssd.png"
+                              alt="Storage" />Storage</a>
+                          <a href="/products/gpu" class="parts-tray-block parts-tray-heading"><img src="image/nav-videocard.png"
+                              alt="Video Card" />Video Card</a>
+                          <a href="/products/powersupply" class="parts-tray-block parts-tray-heading"><img src="image/nav-powersupply.png"
+                              alt="Power Supply" />Power Supply</a>
+                          <a href="/products/pccase" class="parts-tray-block parts-tray-heading"><img src="image/nav-case.png"
+                              alt="Case" />Case</a>
+                        </div>
+                      </div>
+                      <div class="parts-tray-list-col parts-two">
+                        <ul>
+                          <li class="parts-tray-heading">Cooling</li>
+                          <li><a href="/products/pccase-fan">Case Fans</a></li>
+                          <li><a href="/products/fan-controller">Fan Controllers</a></li>
+                          <li><a href="/products/thermal-paste">Thermal Compound</a></li>
+                        </ul>
+                        <ul>
+                          <li class="parts-tray-heading">Drives</li>
+                          <li><a href="/products/optical-drive">Optical Drives</a></li>
+                        </ul>
+                        <ul>
+                          <li class="parts-tray-heading">Expansion</li>
+                          <li><a href="/products/sound-card">Sound Cards</a></li>
+                          <li><a href="/products/wired-network-card">Wired Networking</a></li>
+                          <li><a href="/products/wireless-network-card">Wireless Networking</a></li>
+                        </ul>
+                      </div>
+                      <div class="parts-tray-list-col parts-three">
+                        <ul>
+                          <li class="parts-tray-heading">Displays</li>
+                          <li><a href="/products/monitor">Monitors</a></li>
+                        </ul>
+                        <ul>
+                          <li class="parts-tray-heading">External Storage</li>
+                          <li><a href="/products/external-hard-drive">External Hard Drives</a></li>
+                        </ul>
+                        <ul>
+                          <li class="parts-tray-heading">Peripherals</li>
+                          <li><a href="/products/headphones">Headphones</a></li>
+                          <li><a href="/products/keyboard">Keyboards</a></li>
+                          <li><a href="/products/mouse">Mice</a></li>
+                          <li><a href="/products/speakers">Speakers</a></li>
+                          <li><a href="/products/ups">Uninterruptible Power Supplies</a></li>
+                        </ul>
+                      </div>
+                      <div class="parts-tray-list-col parts-three">
+                        <ul>
+                          <li class="parts-tray-heading">Software</li>
+                          <li><a href="/products/software/#W=1">Antivirus</a></li>
+                          <li><a href="/products/software/#W=8">Audio &amp; Video</a></li>
+                          <li><a href="/products/software/#W=2">Backup</a></li>
+                          <li><a href="/products/software/#W=3">Design &amp; Illustration</a></li>
+                          <li><a href="/products/software/#W=5">Internet Security</a></li>
+                          <li><a href="/products/software/#W=7">Office &amp; Productivity</a></li>
+                          <li><a href="/products/os">Operating Systems</a></li>
+                          <li><a href="/products/software/#W=6">Photography</a></li>
+                        </ul>
+                      </div>
+                      <div class="parts-tray-list-col parts-four">
+                      </div>
+                      <div class="parts-tray-col-clear"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        <div class="drop">
+            <div id="search-tray-container">
+                <div class="container">
+                    <div class="search-tray search-box">
+                        <form action="/search" method="get">
+                            <input type="hidden" name="cc" value="us"/>
+                            <input id="search_q" type="text" name="q" size="32" autocomplete="off" />
+                            <input id="search_go" type="submit" value="Search" />
+                        </form>
+                        <div id="search_result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="modal-footer">
+            <div class="container">
+                <div class="footer-branding">
+                    <div class="copyright-notice">&copy;2018 PCPartPicker, LLC.  All rights reserved.</div>
+                    <div class="switch-to-mobile"><a href="?flavor=mobile">Switch to Mobile Version</a></div>
+
+
+                </div>
+                <ul class="footer-nav">
+                    <h4>Sections</h4>
+                    <li><a href="/list">System Builds</a></li>
+                    <li><a href="/guide">Build Guides</a></li>
+                    <li><a href="/builds">Completed Builds</a></li>
+                    <li><a href="/products">Individual Parts</a></li>
+                </ul>
+                <ul class="footer-nav">
+                    <h4>PCPP</h4>
+                    <li><a href="/forums">Forums</a></li>
+                    <li><a href="/products/pricedrop">Price Drops</a></li>
+                    <li><a href="/trends">Price Trends</a></li>
+                    <li><a href="/blog">PCPP Blog</a></li>
+                </ul>
+                <ul class="footer-nav">
+                    <h4>PCPP</h4>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact &amp; Imprint</a></li>
+                    <li><a href="/tos">Terms of Service</a></li>
+                    <li><a href="/code-of-conduct">User Code of Conduct</a></li>
+                    <li><a href="/code-of-conduct/industry-affiliate">Industry Code of Conduct</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/disclosure">Disclosure</a></li>
+                </ul>
+                <ul class="footer-nav">
+                    <h4>Elsewhere</h4>
+                    <li><a href="https://discord.gg/pcpartpicker">Discord</a></li>
+                    <li><a href="https://www.facebook.com/pcpartpicker">Facebook</a></li>
+                    <li><a href="https://instagram.com/pcpartpicker">Instagram</a></li>
+                    <li><a href="https://twitch.tv/pcpartpicker">Twitch</a></li>
+                    <li><a href="https://twitter.com/pcpartpicker">Twitter</a></li>
+                    <li><a href="https://www.youtube.com/user/pcpartpicker">YouTube</a></li>
+                </ul>
+            </div>
+            <!-- <div class="container">
+              <div class="pcpp-network">
+                <h4>PCPP Network</h4>
+                <div class="title-divider"></div>
+                <ul>
+                  <li><a href="http://pcpartpicker.com" id="pcpp"></a></li>
+                </ul>
+              </div>
+            </div> -->
+
+        </footer>
+        <div id="default_dialog" class="hidden-dialog"></div>
+        <!-- Optional JavaScript -->
+
+        <script src="./js/custom/build.js"></script>
+        <script>
+            let build = new Build('currentBuild');
+            window.onload = function () {
+                let currentBuild = build.currentBuild;
+
+                toggleCompability(currentBuild);
+                renderTable(currentBuild);
+            }
+
+            function renderTable(currentBuild) {
+                let buildTable = document.querySelector('table');
+
+                if (currentBuild.cpu) {
+                    let index = buildTable.querySelector('.cpu').rowIndex;
+                    replaceCellData(buildTable, index, currentBuild.cpu, 'cpu');
+                }
+
+                if (currentBuild.motherboard) {
+                    let index = buildTable.querySelector('.motherboard').rowIndex;
+                    replaceCellData(buildTable, index, currentBuild.motherboard, 'motherboard');
+                }
+
+                if (currentBuild.memory && currentBuild.memory.length > 0) {
+                    let index = buildTable.querySelector('.memory').rowIndex;
+                    addCellData(buildTable, index, currentBuild.memory, 'memory');
+                }
+
+                if (currentBuild.storage && currentBuild.storage.length > 0) {
+                    let index = buildTable.querySelector('.storage').rowIndex;
+                    addCellData(buildTable, index, currentBuild.storage, 'storage');
+                }
+
+                if (currentBuild.gpu && currentBuild.gpu.length > 0) {
+                    let index = buildTable.querySelector('.gpu').rowIndex;
+                    addCellData(buildTable, index, currentBuild.gpu, 'gpu');
+                }
+
+                if (currentBuild.pccase) {
+                    let index = buildTable.querySelector('.pccase').rowIndex;
+                    replaceCellData(buildTable, index, currentBuild.pccase, 'pccase');
+                }
+                
+                if (currentBuild.powersupply) {
+                    let index = buildTable.querySelector('.powersupply').rowIndex;
+                    replaceCellData(buildTable, index, currentBuild.powersupply, 'powersupply');
+                }
+                
+                renderPrice(buildTable, currentBuild);
+            }
+
+            function replaceCellData(table, rowNumber , part, type) {
+                let row = table.rows[rowNumber];
+                row.cells[1].innerHTML = `<img src='https://cdn.pcpartpicker.com/static/forever/images/product/2902390f5e736e53a802e5ca1a81ec2d.256p.jpg' alt='No Image"/>`;
+                row.cells[2].innerHTML = `<a href='/products/${type}/${part.id}'>${part.name}</a>`;
+                row.cells[3].innerHTML = part.price.toLocaleString('vi-VN', { currency: 'VND', style: 'currency' });
+                
+                row.insertCell(4).innerHTML = `<a href='${part.url}'>${part.merchant}</a>`;
+                row.insertCell(5).innerHTML = "<a href='#' class='btn-mds'>Mua</a>";
+                row.insertCell(6).innerHTML = `<a href='/build' onclick=removePart('${type}')>X</a>`;
+            }
+
+            function addCellData(table , rowNumber, partList, type) {
+                let row = table.rows[rowNumber];
+
+                let parts = partList.map(part => `<a href='/products/${type}/${part.id}'>${part.name}</a>`).join('<br/><br/>');
+                let prices = partList.map(part => part.price.toLocaleString('vi-VN', { currency: 'VND', style: 'currency' })).join('<br/><br/>');
+                let merchants = partList.map(part => `<a href='${part.url}'>${part.merchant}</a>`).join('<br/><br/>');
+                let buyLinks = partList.map(part => "<a href='#' class='btn-mds'>Mua</a>").join('<br/><br/>');
+                let removes = partList.map(part => `<a href='/build' onclick='removeSinglePart("${type}", ${part.id})')>X</a>`).join('<br/><br/>');
+                
+                let rowAddMore = `<tr><td></td><td></td><td><a href='/products/${type}' class='btn-mds'>Add more ${type}</a></td></tr>`;
+                $(`.${type}`).after(rowAddMore);
+
+                row.cells[2].innerHTML = parts;
+                row.cells[3].innerHTML = prices;
+            
+                row.insertCell(4).innerHTML = merchants;
+                row.insertCell(5).innerHTML = buyLinks;
+                row.insertCell(6).innerHTML = removes;
+            }
+
+            function sumPrice(total, nextValue) {
+                return total + nextValue;
+            }
+
+            function renderPrice(table, build) {
+                let parts = Object.keys(build);
+                let totalPrices = parts.map(part => {
+                    return Array.isArray(build[part])
+                    ? build[part]
+                        .map(p => p.price)
+                        .reduce(sumPrice, 0)
+                    : build[part].price;
+                }).reduce(sumPrice, 0);
+
+                $('.resume td').eq(3).html(`<b>Total price: ${totalPrices.toLocaleString('vi-VN', { currency: 'VND', style: 'currency' })}</b>`);
+            }
+
+            function toggleCompability(currentBuild) {
+                let divCompability = document.getElementById('part-list-compat-wattage');
+                
+                divCompability.setAttribute('class', 
+                    Object.keys(currentBuild).length > 1 
+                    ? ''
+                    : 'hidden'
+                )
+            }
+
+            function removePart(part) {
+                build.remove(part);
+            }
+
+            function removeSinglePart(type, id) {
+                build.removeSingle(type, id);
+            }
+        </script>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/js/custom/app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

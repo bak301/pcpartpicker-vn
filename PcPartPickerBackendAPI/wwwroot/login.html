@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <title>Login</title>
+</head>
+<body>
+    <div class="registration-box-container">
+        <div class="registration-box">
+            <div class="registration-box-heading">
+                PCPartPicker - Login
+                <div class="registration-box-heading-image"><img src="image/pcpp-mark.png"/></div>
+            </div>
+            <div class="registration-box-content">
+                <div class="login">
+                    <form method="post" action="/accounts/login/">
+                        <input type="hidden" name="csrfmiddlewaretoken">
+                        <input type="hidden" name="next" value="">
+                        <div class="pad-block">
+                            <div class="input-label">Username</div>
+                            <input id="id_username" type="text" name="username" maxlength="75">
+                        </div>
+                        <div class="pad-block">
+                            <div class="input-label">Password</div>
+                            <input type="password" name="password" id="id_password">
+                        </div>
+
+                        <div class="pad-block"><input type="checkbox" name="checkbox" id="checkbox"><span class="login-remember-me">Remember me</span></div>
+                        <div class="pad-block"><input type="submit" value="Log In"></div>
+                        <div class="pad-block login-register-text">
+                            <div>Want to join?  <a href="/accounts/register/">Register here</a>.  It's free!</div>
+                            <div><a href="/accounts/password/reset/">Forgot your password?</a></div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

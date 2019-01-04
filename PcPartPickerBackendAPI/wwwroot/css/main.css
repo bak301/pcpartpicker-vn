@@ -1,0 +1,22 @@
+.hidden  {
+    display: none;
+}
+
+.part .hero {
+    background: #4E5EA6;
+    text-align: center;
+}
+
+.image-wrapper {
+    width: 40px;
+    height: 40px;
+}
+
+.sort-symbol>a {
+    font-size: 150%;
+}
+
+.right-column>h2 {
+    padding-bottom: 1rem;
+}
+

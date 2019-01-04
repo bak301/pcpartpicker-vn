@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>System Build</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="pcpp-header">
+                <a href="index.html">
+                    <h1>PCPartPicker</h1>
+                </a>
+                <ul class="user-nav">
+
+                    <li><a href="/accounts/login">Log In</a></li>
+                    <li><a href="/accounts/register">Register</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="primary-nav">
+                        <a href="/build" class="nav-build"><span>Make a</span> System Build</a>
+                        <a href="/guide" class="nav-guides"><span>View the</span> Build Guides</a>
+                        <a href="/builds" class="nav-builds"><span>See all</span> Completed Builds</a>
+                        <a id="browse-parts-button" href="#" class="nav-parts"><span>Browse by</span>
+                            Individual Parts<span class="nav-dropdown"></span></a>
+                    </div>
+
+                    <div class="secondary-nav">
+                        <div class="sub-links">
+                            <a href="/products/pricedrop">Price Drops</a><a href="/trends">Price Trends</a><a href="/forums">Forums</a><a
+                                href="/blog">Blog</a>
+
+                        </div>
+                        <div class="search"><a href="/search" class="search-parts"></a></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="details">
+        <div class="blog-details">
+            <div class="page-container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-2 panel panel-default address-form is-edit" style="display: block; padding: 3rem">
+                        <div class="panel-heading hidden-lg">
+                            <p style="font-weight: bolder;">Thêm địa chỉ giao hàng</p>
+                        </div>
+
+                        <div class="panel-body">
+                            <form class="form-horizontal bv-form" role="form" id="address-info" novalidate="novalidate"><button
+                                    type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                                <div class="form-group row">
+                                    <label for="full_name" class="col-lg-4 control-label visible-lg-block">Họ tên
+                                    </label>
+                                    <div class="col-lg-8 input-wrap has-feedback has-error">
+                                        <input type="text" name="full_name" class="form-control address" id="full_name"
+                                            value="" placeholder="Nhập họ tên" data-bv-field="full_name"><i class="form-control-feedback bv-no-label fa fa-times"
+                                            data-bv-icon-for="full_name" style=""></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="telephone" class="col-lg-4 control-label visible-lg-block">Điện
+                                        thoại di động</label>
+                                    <div class="col-lg-8 input-wrap has-feedback">
+                                        <input type="tel" name="telephone" class="form-control address" id="telephone"
+                                            value="" placeholder="Nhập số điện thoại" data-bv-field="telephone"><i
+                                            class="form-control-feedback bv-no-label" data-bv-icon-for="telephone"
+                                            style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="telephone"
+                                            data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập Số
+                                            điện thoại</small><small class="help-block" data-bv-validator="regexp"
+                                            data-bv-for="telephone" data-bv-result="NOT_VALIDATED" style="display: none;">Số
+                                            điện thoại không hợp lệ (chỉ chấp nhận số)</small><small class="help-block"
+                                            data-bv-validator="stringLength" data-bv-for="telephone" data-bv-result="NOT_VALIDATED"
+                                            style="display: none;">Số điện thoại chỉ
+                                            được chứa 9 - 15 chữ số</small></div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="region_id" class="col-lg-4 control-label visible-lg-block">Tỉnh/Thành
+                                        phố</label>
+                                    <div class="col-lg-8 input-wrap has-feedback">
+                                        <!--                -->
+                                        <!--                    <input name="region" id="region_id" type="text" class="form-control address" value="-->
+                                        <!--" placeholder="Nhập Tỉnh/Thành phố">-->
+                                        <!---->
+                                        <!--                --> <select name="region_id" class="form-control address"
+                                            id="region_id" data-bv-field="region_id">
+                                            <option value="">Chọn Tỉnh/Thành phố</option>
+                                            <option value="294">Hồ Chí Minh</option>
+                                            <option value="297">Hà Nội</option>
+                                            <option value="291">Đà Nẵng</option>
+                                            <option value="278">An Giang</option>
+                                            <option value="280">Bà Rịa - Vũng Tàu</option>
+                                            <option value="282">Bắc Giang</option>
+                                            <option value="281">Bắc Kạn</option>
+                                            <option value="279">Bạc Liêu</option>
+                                            <option value="283">Bắc Ninh</option>
+                                            <option value="284">Bến Tre</option>
+                                            <option value="285">Bình Dương</option>
+                                            <option value="286">Bình Phước</option>
+                                            <option value="287">Bình Thuận</option>
+                                            <option value="316">Bình Định</option>
+                                            <option value="289">Cà Mau</option>
+                                            <option value="290">Cần Thơ</option>
+                                            <option value="288">Cao Bằng</option>
+                                            <option value="293">Gia Lai</option>
+                                            <option value="295">Hà Giang</option>
+                                            <option value="296">Hà Nam</option>
+                                            <option value="299">Hà Tĩnh</option>
+                                            <option value="300">Hải Dương</option>
+                                            <option value="301">Hải Phòng</option>
+                                            <option value="319">Hậu Giang</option>
+                                            <option value="302">Hoà Bình</option>
+                                            <option value="320">Hưng Yên</option>
+                                            <option value="321">Khánh Hòa</option>
+                                            <option value="322">Kiên Giang</option>
+                                            <option value="323">Kon Tum</option>
+                                            <option value="304">Lai Châu</option>
+                                            <option value="306">Lâm Đồng</option>
+                                            <option value="305">Lạng Sơn</option>
+                                            <option value="324">Lào Cai</option>
+                                            <option value="325">Long An</option>
+                                            <option value="326">Nam Định</option>
+                                            <option value="327">Nghệ An</option>
+                                            <option value="307">Ninh Bình</option>
+                                            <option value="328">Ninh Thuận</option>
+                                            <option value="329">Phú Thọ</option>
+                                            <option value="308">Phú Yên</option>
+                                            <option value="309">Quảng Bình</option>
+                                            <option value="310">Quảng Nam</option>
+                                            <option value="311">Quảng Ngãi</option>
+                                            <option value="330">Quảng Ninh</option>
+                                            <option value="312">Quảng Trị</option>
+                                            <option value="313">Sóc Trăng</option>
+                                            <option value="331">Sơn La</option>
+                                            <option value="332">Tây Ninh</option>
+                                            <option value="333">Thái Bình</option>
+                                            <option value="334">Thái Nguyên</option>
+                                            <option value="335">Thanh Hóa</option>
+                                            <option value="303">Thừa Thiên Huế</option>
+                                            <option value="336">Tiền Giang</option>
+                                            <option value="314">Trà Vinh</option>
+                                            <option value="315">Tuyên Quang</option>
+                                            <option value="337">Vĩnh Long</option>
+                                            <option value="338">Vĩnh Phúc</option>
+                                            <option value="339">Yên Bái</option>
+                                            <option value="292">Đắk Lắk</option>
+                                            <option value="340">Đắk Nông</option>
+                                            <option value="341">Điện Biên</option>
+                                            <option value="317">Đồng Nai</option>
+                                            <option value="318">Đồng Tháp</option>
+                                        </select><i class="form-control-feedback bv-no-label" data-bv-icon-for="region_id"
+                                            style="display: none;"></i>
+                                        <!--                --> <small class="help-block" data-bv-validator="notEmpty"
+                                            data-bv-for="region_id" data-bv-result="NOT_VALIDATED" style="display: none;">Vui
+                                            lòng chọn Tỉnh/Thành phố</small></div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="city_id" class="col-lg-4 control-label visible-lg-block">Quận/Huyện</label>
+                                    <div class="col-lg-8 input-wrap has-feedback">
+                                        <input type="text" name="city" class="form-control address" id="city_id"
+                                            placeholder="Nhập quận/huyện">
+                                        <div class="col-lg-8 input-wrap has-feedback"><i class="form-control-feedback bv-no-label fa fa-times"
+                                                style=""></i>
+                                        </div>
+
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="city_id"
+                                            data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập
+                                            Quận/Huyện</small>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="ward_id" class="col-lg-4 control-label visible-lg-block">Phường/Xã</label>
+                                    <div class="col-lg-8 input-wrap has-feedback">
+                                        <input type="text" name="city" class="form-control address" id="city_id"
+                                            placeholder="Nhập Phường/Xã">
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="ward_id"
+                                            data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng chọn
+                                            Phường/Xã</small></div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="street" class="col-lg-4 control-label visible-lg-block">Địa chỉ</label>
+                                    <div class="col-lg-8 input-wrap has-feedback">
+                                        <textarea name="street" class="form-control address" id="street" placeholder="Ví dụ: 69 đường Trần Duy Hưng"
+                                            data-bv-field="street"></textarea><i class="form-control-feedback bv-no-label"
+                                            data-bv-icon-for="street" style="display: none;"></i>
+                                        <span class="help-block"></span>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="street"
+                                            data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập Địa
+                                            chỉ</small><small class="help-block" data-bv-validator="regexp" data-bv-for="street"
+                                            data-bv-result="NOT_VALIDATED" style="display: none;">Địa
+                                            chỉ của bạn
+                                            không hợp lệ </small></div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <div class="col-lg-offset-4 col-lg-8">
+                                        <input type="hidden" name="address_id" value="">
+                                        <a id="order-btn" class="btn btn-primary">Đặt hàng</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- details -->
+
+    <div class="drop">
+        <div id="browse-parts-tray-container">
+            <div class="container">
+                <div class="browse-parts-tray">
+                    <div class="parts-tray-block-col core-parts">
+                        <div>
+                            <a href="/products/cpu/" class="parts-tray-block parts-tray-heading"><img src="image/nav-cpu.png"
+                                    alt="CPU" />CPU</a>
+                            <a href="/products/cpu-cooler/" class="parts-tray-block parts-tray-heading"><img src="image/nav-cpucooler.png"
+                                    alt="CPU Cooler" />CPU Cooler</a>
+                            <a href="/products/motherboard/" class="parts-tray-block parts-tray-heading"><img src="image/nav-motherboard.png"
+                                    alt="Motherboard" />Motherboard</a>
+                            <a href="/products/memory/" class="parts-tray-block parts-tray-heading"><img src="image/nav-memory.png"
+                                    alt="Memory" />Memory</a>
+                        </div>
+                        <div>
+                            <a href="/products/storage/" class="parts-tray-block parts-tray-heading"><img src="image/nav-ssd.png"
+                                    alt="Storage" />Storage</a>
+                            <a href="/products/gpu/" class="parts-tray-block parts-tray-heading"><img src="image/nav-videocard.png"
+                                    alt="Video Card" />Video Card</a>
+                            <a href="/products/powersupply/" class="parts-tray-block parts-tray-heading"><img src="image/nav-powersupply.png"
+                                    alt="Power Supply" />Power Supply</a>
+                            <a href="/products/pccase/" class="parts-tray-block parts-tray-heading"><img src="image/nav-case.png"
+                                    alt="Case" />Case</a>
+                        </div>
+                    </div>
+                    <div class="parts-tray-list-col parts-two">
+                        <ul>
+                            <li class="parts-tray-heading">Cooling</li>
+                            <li><a href="/products/pccase-fan/">Case Fans</a></li>
+                            <li><a href="/products/fan-controller/">Fan Controllers</a></li>
+                            <li><a href="/products/thermal-paste/">Thermal Compound</a></li>
+                        </ul>
+                        <ul>
+                            <li class="parts-tray-heading">Drives</li>
+                            <li><a href="/products/optical-drive/">Optical Drives</a></li>
+                        </ul>
+                        <ul>
+                            <li class="parts-tray-heading">Expansion</li>
+                            <li><a href="/products/sound-card/">Sound Cards</a></li>
+                            <li><a href="/products/wired-network-card/">Wired Networking</a></li>
+                            <li><a href="/products/wireless-network-card/">Wireless Networking</a></li>
+                        </ul>
+                    </div>
+                    <div class="parts-tray-list-col parts-three">
+                        <ul>
+                            <li class="parts-tray-heading">Displays</li>
+                            <li><a href="/products/monitor/">Monitors</a></li>
+                        </ul>
+                        <ul>
+                            <li class="parts-tray-heading">External Storage</li>
+                            <li><a href="/products/external-hard-drive/">External Hard Drives</a></li>
+                        </ul>
+                        <ul>
+                            <li class="parts-tray-heading">Peripherals</li>
+                            <li><a href="/products/headphones/">Headphones</a></li>
+                            <li><a href="/products/keyboard/">Keyboards</a></li>
+                            <li><a href="/products/mouse/">Mice</a></li>
+                            <li><a href="/products/speakers/">Speakers</a></li>
+                            <li><a href="/products/ups/">Uninterruptible Power Supplies</a></li>
+                        </ul>
+                    </div>
+                    <div class="parts-tray-list-col parts-three">
+                        <ul>
+                            <li class="parts-tray-heading">Software</li>
+                            <li><a href="/products/software/#W=1">Antivirus</a></li>
+                            <li><a href="/products/software/#W=8">Audio &amp; Video</a></li>
+                            <li><a href="/products/software/#W=2">Backup</a></li>
+                            <li><a href="/products/software/#W=3">Design &amp; Illustration</a></li>
+                            <li><a href="/products/software/#W=5">Internet Security</a></li>
+                            <li><a href="/products/software/#W=7">Office &amp; Productivity</a></li>
+                            <li><a href="/products/os/">Operating Systems</a></li>
+                            <li><a href="/products/software/#W=6">Photography</a></li>
+                        </ul>
+                    </div>
+                    <div class="parts-tray-list-col parts-four">
+                    </div>
+                    <div class="parts-tray-col-clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="drop">
+        <div id="search-tray-container">
+            <div class="container">
+                <div class="search-tray search-box">
+                    <form action="/search/" method="get">
+                        <input type="hidden" name="cc" value="us" />
+                        <input id="search_q" type="text" name="q" size="32" autocomplete="off" />
+                        <input id="search_go" type="submit" value="Search" />
+                    </form>
+                    <div id="search_result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="modal-footer">
+        <div class="container">
+            <div class="footer-branding">
+                <div class="copyright-notice">&copy;2018 PCPartPicker, LLC. All rights reserved.</div>
+                <div class="switch-to-mobile"><a href="?flavor=mobile">Switch to Mobile Version</a></div>
+
+
+            </div>
+            <ul class="footer-nav">
+                <h4>Sections</h4>
+                <li><a href="/list/">System Builds</a></li>
+                <li><a href="/guide/">Build Guides</a></li>
+                <li><a href="/builds/">Completed Builds</a></li>
+                <li><a href="/products/">Individual Parts</a></li>
+            </ul>
+            <ul class="footer-nav">
+                <h4>PCPP</h4>
+                <li><a href="/forums/">Forums</a></li>
+                <li><a href="/products/pricedrop/">Price Drops</a></li>
+                <li><a href="/trends/">Price Trends</a></li>
+                <li><a href="/blog/">PCPP Blog</a></li>
+            </ul>
+            <ul class="footer-nav">
+                <h4>PCPP</h4>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact &amp; Imprint</a></li>
+                <li><a href="/tos/">Terms of Service</a></li>
+                <li><a href="/code-of-conduct/">User Code of Conduct</a></li>
+                <li><a href="/code-of-conduct/industry-affiliate/">Industry Code of Conduct</a></li>
+                <li><a href="/privacy/">Privacy Policy</a></li>
+                <li><a href="/disclosure/">Disclosure</a></li>
+            </ul>
+            <ul class="footer-nav">
+                <h4>Elsewhere</h4>
+                <li><a href="https://discord.gg/pcpartpicker">Discord</a></li>
+                <li><a href="https://www.facebook.com/pcpartpicker">Facebook</a></li>
+                <li><a href="https://instagram.com/pcpartpicker">Instagram</a></li>
+                <li><a href="https://twitch.tv/pcpartpicker">Twitch</a></li>
+                <li><a href="https://twitter.com/pcpartpicker">Twitter</a></li>
+                <li><a href="https://www.youtube.com/user/pcpartpicker">YouTube</a></li>
+            </ul>
+        </div>
+        <!-- <div class="container">
+        <div class="pcpp-network">
+          <h4>PCPP Network</h4>
+          <div class="title-divider"></div>
+          <ul>
+            <li><a href="http://pcpartpicker.com" id="pcpp"></a></li>
+          </ul>
+        </div>
+      </div> -->
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/custom/utility.js"></script>
+    <script src="/js/custom/build.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#order-btn").on("click", async function () {
+                let buildId = await postBuild();
+                postOrder(buildId);
+                confirm("Bạn đã đặt cấu hình máy tính thành công !");
+                window.location.href = '/build';
+            })
+        });
+
+        async function postBuild() {
+            let build = new Build("currentBuild").currentBuild;
+            let postData = {
+                buildName: ""
+            };
+
+            for (var key in build) {
+                switch (key) {
+                    case 'gpu':
+                    case 'memory':
+                    case 'storage':
+                        postData[key] = (typeof build[key][0] === 'undefined') ? 0 : build[key][0].id
+                        break;
+                    default:
+                        postData[key] = (typeof build[key] === 'undefined') ? 0 : build[key].id
+                        break;
+                }
+            }
+
+            return await postJson(postData, "api/build");
+        }
+
+        async function postOrder(buildId) {
+            let full_name = $('#full_name').val();
+            let telephone = $('#telephone').val();
+            let region = $('#region').val();
+            let city = $('#city_id').val();
+            let street = $('#street').val();
+            let address = `${street}, ${city}`;
+
+            let postData = {
+                customerName: full_name,
+                phoneNumber: telephone.toString(),
+                address: address,
+                orderStatus: true,
+                buildId: buildId
+            }
+
+            return await postJson(postData, 'api/order')
+        }
+    </script>
+    <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable" tabindex="-1" role="dialog"
+        aria-describedby="default_dialog" aria-labelledby="ui-id-1" style="display: none; position: relative;">
+        <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">&nbsp;</span>
+            <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close"
+                role="button" aria-disabled="false" title="close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+                <span class="ui-button-text">close</span></button></div>
+        <div id="default_dialog" class="hidden-dialog ui-dialog-content ui-widget-content" style="display: block;"></div>
+    </div>
+</body>
+
+</html>

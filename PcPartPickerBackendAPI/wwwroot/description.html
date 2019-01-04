@@ -1,0 +1,865 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script language="javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <title>Build Guides</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="pcpp-header">
+                <a href="/">
+                    <h1>PCPartPicker</h1>
+                </a>
+                <ul class="user-nav">
+
+                    <li><a href="/accounts/login">Log In</a></li>
+                    <li><a href="/accounts/register">Register</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="primary-nav">
+                        <a href="/build" class="nav-build"><span>Do a</span> System Build</a>
+                        <a href="/guide" class="nav-guides"><span>View the</span> Build Guides</a>
+                        <a href="/builds" class="nav-builds"><span>See all</span> Completed Builds</a>
+                        <a id="browse-parts-button" href="#" class="nav-parts">
+                            <span>Browse by</span>
+                            Individual Parts<span class="nav-dropdown"></span>
+                        </a>
+                    </div>
+
+                    <div class="secondary-nav">
+                        <div class="sub-links">
+                            <a href="/products/pricedrop">Price Drops</a><a href="/trends">Price Trends</a><a href="/forums">Forums</a><a
+                                href="/blog">Blog</a>
+                        </div>
+                        <div class="search"><a href="/search" class="search-parts"></a></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <div class="build-guide">
+            <div class="hero">
+                <div class="container">
+                    <div class="title">
+                        <h4 class="kind">Build Guide</h4>
+                        <h1 class="name">Modest AMD Gaming Build</h1>
+                        <a href="/user/manirelli/"><img src="image/avatar/ta.jpg"
+                                class="user-thumb-md"></a>
+                        <p class="owner">by <a href="/user/manirelli/">manirelli</a></p>
+                    </div> <!-- title -->
+                </div> <!-- page container -->
+            </div> <!-- hero -->
+
+            <div class="image-gallery">
+                <div class="container">
+                    <div class="build-carousel owl-carousel owl-theme" style="opacity: 1; display: block;">
+
+                        <div class="owl-wrapper-outer">
+                            <div class="owl-wrapper" style="width: 2592px; left: -162px; padding-left: 0px; display: block;">
+                                <div class="owl-item" style="width: 162px;"><a class="item" onclick="show_gallery(0, carousel_images);return false;"><img
+                                            src="image/build-guides/55aea2dd64e2e3a3e3b1d678048d8d76.256p.jpg"></a></div>
+                                <div class="owl-item" style="width: 162px;"><a class="item" onclick="show_gallery(1, carousel_images);return false;"><img
+                                            src="image/build-guides/75eae1d6254dc2bd453a2cf64b601ede.256p.jpg"></a></div>
+                                <div class="owl-item" style="width: 162px;"><a class="item" onclick="show_gallery(2, carousel_images);return false;"><img
+                                            src="image/build-guides/aace27f895023030d3a7631beb093016.256p.jpg"></a></div>
+                                <div class="owl-item" style="width: 162px;"><a class="item" onclick="show_gallery(3, carousel_images);return false;"><img
+                                            src="image/build-guides/41jvp1WLRlL.jpg"></a></div>
+                                <div class="owl-item" style="width: 162px;"><a class="item" onclick="show_gallery(4, carousel_images);return false;"><img
+                                            src="image/build-guides/41pZ3Yu9WXL.jpg"></a></div>
+                                <div class="owl-item" style="width: 162px;"><a class="item" onclick="show_gallery(5, carousel_images);return false;"><img
+                                            src="image/build-guides/41EP-IZBBmL.jpg"></a></div>
+                                <div class="owl-item" style="width: 162px;"><a class="item" onclick="show_gallery(6, carousel_images);return false;"><img
+                                            src="image/build-guides/ec48e16ee4d6629045cfc4d71c649746.256p.jpg"></a></div>
+                                <div class="owl-item" style="width: 162px;"><a class="item" onclick="show_gallery(7, carousel_images);return false;"><img
+                                            src="image/build-guides/51shdHvd7GL.jpg"></a></div>
+                            </div>
+                        </div>
+                        <div class="owl-controls clickable">
+                            <div class="owl-pagination">
+                                <div class="owl-page"><span class=""></span></div>
+                                <div class="owl-page active"><span class=""></span></div>
+                            </div>
+                            <div class="owl-buttons">
+                                <div class="owl-prev"><a class="carousel-left-arrow"></a></div>
+                                <div class="owl-next"><a class="carousel-right-arrow"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="desc">
+                <div class="container">
+                    <div class="column-wrapper" >
+                        
+                            <div id="vote_rate"></div>
+
+                            <div class="block">
+                                <h1>
+                                    Description
+                                </h1>
+                                <div class="markdown">
+                                    <h2>CPU</h2>
+                                    <p>Our Modest AMD Gaming Build is built around the Ryzen 5 2600. Using the stock
+                                        cooler you should be able to achieve moderate overclocks on this unlocked
+                                        processor. </p>
+                                    <h2>Motherboard</h2>
+                                    <p>We've paired the R5 2600 with a parametric list of mATX B450 motherboards that
+                                        supports up to 64GB of DDR4 memory, multiple SATA6 devices, and front panel
+                                        USB3.0. </p>
+                                    <h2>Memory</h2>
+                                    <p>For this build we opted to go with 16GB of DDR4 memory. The parametric filter
+                                        finds the best price on 16GB kits of memory that are within AMD’s recommended
+                                        specifications. We've limited it to a range from DDR4-3000 to DDR4-3400 as
+                                        Ryzen CPUs scale well with higher frequency memory. At the current time, using
+                                        memory rated over 3400mhz is not advised without doing extra research as DIMM
+                                        support can be hit or miss. AMD is working on releasing additional BIOS updates
+                                        to add better compatibility for higher frequency memory. </p>
+                                    <h2>Storage</h2>
+                                    <p>We're also using a parametric filter that will actively select the best-priced
+                                        SSD of at least 500GB capacity. Additionally, we're including a 2TB mechanical
+                                        hard drive in a parametric filter for things like storing media and extra
+                                        games. Everyone's storage needs differ, so feel free to change the capacity to
+                                        your usage.</p>
+                                    <h2>GPU</h2>
+                                    <p>At this price point we suggest using the AMD RX 580 8GB edition. We specifically
+                                        filter for the 8GB model as the 4GB may run into issues in more VRAM-heavy
+                                        games. The performance across most games will be similar to the Nvidia GTX
+                                        1060. We've created a parametric filter to show you the lowest priced, full
+                                        sized AMD RX 580 8GB which will be powerful enough for most AAA games at 1080p.</p>
+                                    <h2>Case</h2>
+                                    <p>All of the components are housed in the Cooler Master MasterBox Q300L MicroATX
+                                        mini tower. This case is an affordable option that has a large side panel
+                                        window, front panel USB3.0, room for full size graphics cards, and cutouts in
+                                        the motherboard tray for easy cable routing. </p>
+                                    <h2>PSU</h2>
+                                    <p>For our power supply, we're using a parametric selection of well-reviewed fully
+                                        and semi-modular units, all of which will provide more than enough power for
+                                        this system.</p>
+                                </div>
+                                <div class="comment-data-row">
+                                </div>
+                            </div>
+                            <div class="block">
+                                <h2>
+                                    Part List
+                                    <span class="header-actions">
+                                        <a href="#partlist_edit" onclick="pp_partlist_edit('MzjDTB');return false;"
+                                            class="btn-mds">Customize This Part List</a>
+                                    </span>
+                                </h2>
+                                <div class="block part-list">
+                                    <div class="part-list-compat-wattage">
+                                        <p class="compat-message compat-message-ok"><span>Compatibility Check:</span>
+                                            No issues/incompatibilities found.</p>
+                                        <div class="est-wattage">
+                                            Estimated Wattage: <a id="explain_wattage" href="#explain_wattage">294W</a>
+                                        </div>
+                                    </div>
+                                    <table class="manual-zebra">
+
+                                        <thead>
+                                            <tr>
+                                                <th class="tl">Component</th>
+                                                <th></th>
+                                                <th class="tl">Selection</th>
+
+                                                <th class="tr">Base</th>
+                                                <th class="tc">Promo</th>
+                                                <th class="tc">Shipping</th>
+                                                <th class="tc">Tax</th>
+
+                                                <th class="tr">Price</th>
+
+                                                <th class="tl">Where</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr class="last zebra">
+                                                <td class="component-type tl"><a href="/products/cpu/">CPU</a></td>
+                                                <td class="component-image"><a href="/product/jLF48d/amd-ryzen-5-2600-34ghz-6-core-processor-yd2600bbafbox"
+                                                        class="image-wrapper "><img src="image/build-guides/55aea2dd64e2e3a3e3b1d678048d8d76.256p.jpg"
+                                                            class=""></a></td>
+                                                <td class="component-name tl">
+                                                    <div>
+
+                                                        <a href="/product/jLF48d/amd-ryzen-5-2600-34ghz-6-core-processor-yd2600bbafbox">AMD
+                                                            - Ryzen 5 2600 3.4 GHz 6-Core Processor</a>
+
+
+                                                    </div>
+                                                </td>
+                                                <td class="tr nowrap"><a href="/mr/newegg/jLF48d" rel="nofollow" target="_blank">$159.99</a></td>
+                                                <td class="tc nowrap"></td>
+                                                <td class="tc nowrap">
+                                                    $0.99
+                                                </td>
+                                                <td class="tr nowrap"></td>
+
+                                                <td class="tr price nowrap"><a href="/mr/newegg/jLF48d" rel="nofollow"
+                                                        target="_blank">$160.98</a></td>
+
+                                                <td class="merchant"><a href="/mr/newegg/jLF48d" rel="nofollow" target="_blank">Newegg</a></td>
+
+                                                <td class="nowrap">
+
+                                                    <a href="/mr/newegg/jLF48d" class="btn-mds" rel="nofollow" target="_blank">Buy</a>
+
+                                                </td>
+
+
+                                            </tr>
+                                            <tr class="last zebra" id="motherb">
+                                                <td class="component-type tl"><a href="/products/motherboard/">Motherboard</a></td>
+                                                <td class="component-image"><a href="/product/hpRzK8/gigabyte-b450m-ds3h-micro-atx-am4-motherboard-b450m-ds3h"
+                                                        class="image-wrapper "><img src="image/build-guides/75eae1d6254dc2bd453a2cf64b601ede.256p.jpg"
+                                                            class=""></a></td>
+                                                <td class="component-name tl">
+                                                    <div>
+
+                                                        <a href="/product/hpRzK8/gigabyte-b450m-ds3h-micro-atx-am4-motherboard-b450m-ds3h">Gigabyte
+                                                            - B450M DS3H Micro ATX AM4 Motherboard</a>
+                                                    </div>
+
+                                                    <div class="parametric-selection">
+
+                                                        <a href="/products/motherboard/#N=4,16&amp;c=133&amp;f=7&amp;s=33">From
+                                                            parametric filter</a>
+                                                        <ul class="">
+
+                                                            <li>Socket / CPU: AM4</li>
+
+                                                            <li>Form Factor: Micro ATX</li>
+
+                                                            <li>Chipset: AMD B450</li>
+
+                                                            <li>RAM Slots: 4 - 16</li>
+
+                                                        </ul>
+
+                                                    </div>
+
+                                                </td>
+                                                <td class="tr nowrap"><a href="/mr/newegg/hpRzK8" rel="nofollow" target="_blank">$59.99</a></td>
+                                                <td class="tc nowrap">-$5.00</td>
+                                                <td class="tc nowrap">
+                                                    FREE
+                                                </td>
+                                                <td class="tr nowrap"></td>
+
+                                                <td class="tr price nowrap"><a href="/mr/newegg/hpRzK8" rel="nofollow"
+                                                        target="_blank">$54.99</a></td>
+
+                                                <td class="merchant"><a href="/mr/newegg/hpRzK8" rel="nofollow" target="_blank">Newegg</a></td>
+                                                <td class="nowrap">
+
+                                                    <a href="/mr/newegg/hpRzK8" class="btn-mds" rel="nofollow" target="_blank">Buy</a>
+
+                                                </td>
+                                            </tr>
+
+                                            <tr class="last price-modifier">
+                                                
+                                            </tr>
+
+                                            <tr class="last zebra">
+                                                <td class="component-type tl"><a href="/products/memory/">Memory</a></td>
+                                                <td class="component-image"><a href="/product/FNprxr/gskill-aegis-16gb-2-x-8gb-ddr4-3000-memory-f43000c16d16gisb"
+                                                        class="image-wrapper "><img src="image/build-guides/aace27f895023030d3a7631beb093016.256p.jpg"
+                                                            class=""></a></td>
+                                                <td class="component-name tl">
+                                                    <div>
+
+                                                        <a href="/product/FNprxr/gskill-aegis-16gb-2-x-8gb-ddr4-3000-memory-f43000c16d16gisb">G.Skill
+                                                            - Aegis 16 GB (2 x 8 GB) DDR4-3000 Memory</a>
+
+
+                                                    </div>
+
+                                                    <div class="parametric-selection">
+
+                                                        <a href="/products/memory/#Z=16384002&amp;s=403000,403200,403300,403400&amp;t=14">From
+                                                            parametric filter</a>
+                                                        <ul class="">
+
+                                                            <li>Speed: DDR4-3000, DDR4-3200, DDR4-3300, DDR4-3400</li>
+
+                                                            <li>Type: 288-pin DIMM</li>
+
+                                                            <li>Size: 16GB (2x8GB)</li>
+
+                                                        </ul>
+
+                                                    </div>
+
+                                                </td>
+
+
+                                                <td class="tr nowrap"><a href="/mr/newegg/FNprxr" rel="nofollow" target="_blank">$99.99</a></td>
+                                                <td class="tc nowrap"></td>
+                                                <td class="tc nowrap">
+
+
+                                                    FREE
+
+
+                                                </td>
+                                                <td class="tr nowrap"></td>
+
+                                                <td class="tr price nowrap"><a href="/mr/newegg/FNprxr" rel="nofollow"
+                                                        target="_blank">$99.99</a></td>
+
+                                                <td class="merchant"><a href="/mr/newegg/FNprxr" rel="nofollow" target="_blank">Newegg</a></td>
+
+
+
+
+                                                <td class="nowrap">
+
+                                                    <a href="/mr/newegg/FNprxr" class="btn-mds" rel="nofollow" target="_blank">Buy</a>
+
+                                                </td>
+
+
+                                            </tr>
+                                            <tr class="">
+                                                <td class="component-type tl"><a href="/products/internal-hard-drive/">Storage</a></td>
+                                                <td class="component-image"><a href="/product/CZZFf7/addlink-512gb-25-solid-state-drive-ad512gbs10s3"
+                                                        class="image-wrapper "><img src="image/build-guides/41jvp1WLRlL.jpg"
+                                                            class=""></a></td>
+                                                <td class="component-name tl">
+                                                    <div>
+
+                                                        <a href="/product/CZZFf7/addlink-512gb-25-solid-state-drive-ad512gbs10s3">Addlink
+                                                            - 512 GB 2.5" Solid State Drive</a>
+
+
+                                                    </div>
+
+                                                    <div class="parametric-selection">
+
+                                                        <a href="/products/internal-hard-drive/#A=500000000000,15360000000000&amp;t=0">From
+                                                            parametric filter</a>
+                                                        <ul class="">
+
+                                                            <li>Capacity: 500 GB - 15360 GB</li>
+
+                                                            <li>Type: SSD</li>
+
+                                                        </ul>
+
+                                                    </div>
+
+                                                </td>
+
+
+                                                <td class="tr nowrap"><a href="/mr/amazon/CZZFf7" rel="nofollow" target="_blank">$64.88</a></td>
+                                                <td class="tc nowrap"></td>
+                                                <td class="tc nowrap">
+                                                    FREE
+
+                                                </td>
+                                                <td class="tr nowrap"></td>
+
+                                                <td class="tr price nowrap"><a href="/mr/amazon/CZZFf7" rel="nofollow"
+                                                        target="_blank">$64.88</a></td>
+
+                                                <td class="merchant"><a href="/mr/amazon/CZZFf7" rel="nofollow" target="_blank">Amazon</a></td>
+
+
+
+
+                                                <td class="nowrap">
+
+                                                    <a href="/mr/amazon/CZZFf7" class="btn-mds" rel="nofollow" target="_blank">Buy</a>
+
+                                                </td>
+
+
+                                            </tr>
+                                            <tr class="last">
+                                                <td class="component-type tl"></td>
+                                                <td class="component-image"><a href="/product/2RPfrH/hitachi-internal-hard-drive-0f10311"
+                                                        class="image-wrapper "><img src="image/build-guides/41pZ3Yu9WXL.jpg"
+                                                            class=""></a></td>
+                                                <td class="component-name tl">
+                                                    <div>
+
+                                                        <a href="/product/2RPfrH/hitachi-internal-hard-drive-0f10311">Hitachi
+                                                            - Deskstar 7K2000 2 TB 3.5" 7200RPM Internal Hard Drive</a>
+
+
+                                                    </div>
+
+                                                    <div class="parametric-selection">
+
+                                                        <a href="/products/internal-hard-drive/#A=2000000000000,15360000000000&amp;t=7200">From
+                                                            parametric filter</a>
+                                                        <ul class="">
+
+                                                            <li>Capacity: 2000 GB - 15360 GB</li>
+
+                                                            <li>Type: 7200RPM</li>
+
+                                                        </ul>
+
+                                                    </div>
+
+                                                </td>
+
+
+                                                <td class="tr nowrap"><a href="/mr/amazon/2RPfrH" rel="nofollow" target="_blank">$53.99</a></td>
+                                                <td class="tc nowrap"></td>
+                                                <td class="tc nowrap">
+
+
+                                                    FREE
+
+
+                                                </td>
+                                                <td class="tr nowrap"></td>
+
+                                                <td class="tr price nowrap"><a href="/mr/amazon/2RPfrH" rel="nofollow"
+                                                        target="_blank">$53.99</a></td>
+
+                                                <td class="merchant"><a href="/mr/amazon/2RPfrH" rel="nofollow" target="_blank">Amazon</a></td>
+
+
+
+
+                                                <td class="nowrap">
+
+                                                    <a href="/mr/amazon/2RPfrH" class="btn-mds" rel="nofollow" target="_blank">Buy</a>
+
+                                                </td>
+
+
+                                            </tr>
+                                            <tr class="zebra">
+                                                <td class="component-type tl"><a href="/products/video-card/">Video
+                                                        Card</a></td>
+                                                <td class="component-image"><a href="/product/rKgzK8/powercolor-radeon-rx-580-8gb-video-card-axrx-580-8gbd5-3dhdv2oc"
+                                                        class="image-wrapper "><img src="image/build-guides/41EP-IZBBmL.jpg"
+                                                            class=""></a></td>
+                                                <td class="component-name tl">
+                                                    <div>
+
+                                                        <a href="/product/rKgzK8/powercolor-radeon-rx-580-8gb-video-card-axrx-580-8gbd5-3dhdv2oc">PowerColor
+                                                            - Radeon RX 580 8 GB Video Card</a>
+
+
+                                                    </div>
+
+                                                    <div class="parametric-selection">
+
+                                                        <a href="/products/video-card/#G=8589934592&amp;L=223000000,403000000&amp;c=391">From
+                                                            parametric filter</a>
+                                                        <ul class="">
+
+                                                            <li>Chipset: Radeon RX 580</li>
+
+                                                            <li>Video RAM: 8 GB</li>
+
+                                                            <li>Length: 223 mm - 403 mm</li>
+
+                                                        </ul>
+
+                                                    </div>
+
+                                                </td>
+
+
+                                                <td class="tr nowrap"><a href="/mr/newegg/rKgzK8" rel="nofollow" target="_blank">$189.99</a></td>
+                                                <td class="tc nowrap"></td>
+                                                <td class="tc nowrap">
+
+
+                                                    FREE
+
+
+                                                </td>
+                                                <td class="tr nowrap"></td>
+
+                                                <td class="tr price nowrap"><a href="/mr/newegg/rKgzK8" rel="nofollow"
+                                                        target="_blank">$189.99</a></td>
+
+                                                <td class="merchant"><a href="/mr/newegg/rKgzK8" rel="nofollow" target="_blank">Newegg</a></td>
+
+
+
+
+                                                <td class="nowrap">
+
+                                                    <a href="/mr/newegg/rKgzK8" class="btn-mds" rel="nofollow" target="_blank">Buy</a>
+
+                                                </td>
+
+
+                                            </tr>
+                                            <!-- price modifier -->
+
+                                            <tr class="last zebra price-modifier">
+                                                
+                                            </tr>
+                                            <tr class="last">
+                                                <td class="component-type tl"><a href="/products/case/">Case</a></td>
+                                                <td class="component-image"><a href="/product/rnGxFT/cooler-master-masterbox-q300l-microatx-mini-tower-case-mcb-q300l-kann-s00"
+                                                        class="image-wrapper "><img src="image/build-guides/ec48e16ee4d6629045cfc4d71c649746.256p.jpg"
+                                                            class=""></a></td>
+                                                <td class="component-name tl">
+                                                    <div>
+
+                                                        <a href="/product/rnGxFT/cooler-master-masterbox-q300l-microatx-mini-tower-case-mcb-q300l-kann-s00">Cooler
+                                                            Master - MasterBox Q300L MicroATX Mini Tower Case</a>
+
+
+                                                    </div>
+
+                                                </td>
+
+
+                                                <td class="tr nowrap"><a href="/mr/neweggbusiness/rnGxFT" rel="nofollow"
+                                                        target="_blank">$39.99</a></td>
+                                                <td class="tc nowrap"></td>
+                                                <td class="tc nowrap">
+
+
+                                                    $3.99
+
+
+                                                </td>
+                                                <td class="tr nowrap"></td>
+
+                                                <td class="tr price nowrap"><a href="/mr/neweggbusiness/rnGxFT" rel="nofollow"
+                                                        target="_blank">$43.98</a></td>
+
+                                                <td class="merchant"><a href="/mr/neweggbusiness/rnGxFT" rel="nofollow"
+                                                        target="_blank">Newegg Business</a></td>
+
+
+
+
+                                                <td class="nowrap">
+
+                                                    <a href="/mr/neweggbusiness/rnGxFT" class="btn-mds" rel="nofollow"
+                                                        target="_blank">Buy</a>
+
+                                                </td>
+
+
+                                            </tr>
+
+                                            <tr class="last zebra">
+                                                <td class="component-type tl"><a href="/products/power-supply/">Power
+                                                        Supply</a></td>
+                                                <td class="component-image"><a href="/product/DPCwrH/seasonic-power-supply-ssr550rm"
+                                                        class="image-wrapper "><img src="image/build-guides/51shdHvd7GL.jpg"
+                                                            class=""></a></td>
+                                                <td class="component-name tl">
+                                                    <div>
+
+                                                        <a href="/product/DPCwrH/seasonic-power-supply-ssr550rm">SeaSonic
+                                                            - G 550 W 80+ Gold Certified Semi-Modular ATX Power Supply</a>
+
+
+                                                    </div>
+
+                                                    <div class="parametric-selection">
+
+                                                        <div>
+                                                            From parametric selection
+                                                            <span id="parametric_show_2">(<a href="#show_criteria"
+                                                                    onclick="$(this).text($(this).text() == 'show' ? 'hide': 'show');$('#parametric_criteria_2').toggle();return false;">show</a>)</span>
+                                                        </div>
+                                                        <ul id="parametric_criteria_2" style="display:none;">
+
+                                                            <li><a href="/product/R7V48d/seasonic-power-supply-ssr650rm">SeaSonic
+                                                                    - 650 W 80+ Gold Certified Semi-Modular ATX Power
+                                                                    Supply</a></li>
+
+                                                            <li><a href="/product/DPCwrH/seasonic-power-supply-ssr550rm">SeaSonic
+                                                                    - G 550 W 80+ Gold Certified Semi-Modular ATX Power
+                                                                    Supply</a></li>
+
+                                                            <li><a href="/product/qYTrxr/evga-power-supply-220g20550y1">EVGA
+                                                                    - SuperNOVA G2 550 W 80+ Gold Certified
+                                                                    Fully-Modular ATX Power Supply</a></li>
+
+                                                            <li><a href="/product/sMM323/evga-supernova-g3-550w-80-gold-certified-fully-modular-atx-power-supply-220-g3-0550">EVGA
+                                                                    - SuperNOVA G3 550 W 80+ Gold Certified
+                                                                    Fully-Modular ATX Power Supply</a></li>
+
+                                                            <li><a href="/product/dDH48d/corsair-txm-gold-550w-80-gold-certified-semi-modular-atx-power-supply-cp-9020133-na">Corsair
+                                                                    - TXM Gold 550 W 80+ Gold Certified Semi-Modular
+                                                                    ATX Power Supply</a></li>
+
+                                                        </ul>
+
+                                                    </div>
+
+                                                </td>
+
+
+                                                <td class="tr nowrap"><a href="/mr/superbiiz/DPCwrH" rel="nofollow"
+                                                        target="_blank">$65.99</a></td>
+                                                <td class="tc nowrap"></td>
+                                                <td class="tc nowrap">
+
+
+                                                    FREE
+
+
+                                                </td>
+                                                <td class="tr nowrap"></td>
+
+                                                <td class="tr price nowrap"><a href="/mr/superbiiz/DPCwrH" rel="nofollow"
+                                                        target="_blank">$65.99</a></td>
+
+                                                <td class="merchant"><a href="/mr/superbiiz/DPCwrH" rel="nofollow"
+                                                        target="_blank">SuperBiiz</a></td>
+
+                                                <td class="nowrap">
+
+                                                    <a href="/mr/superbiiz/DPCwrH" class="btn-mds" rel="nofollow"
+                                                        target="_blank">Buy</a>
+
+                                                </td>
+
+
+                                            </tr>
+                                            <tr class=" part-list-totals">
+                                                <td colspan="7">Base Total:</td>
+                                                <td class="tr nowrap">$734.81</td>
+
+                                                <td></td>
+
+                                                <td></td>
+
+                                                <td></td>
+                                            </tr>
+
+
+
+                                            <tr class=" part-list-totals">
+                                                <td colspan="7">Mail-in Rebates:</td>
+                                                <td class="tr nowrap">-$5.00</td>
+
+                                                <td></td>
+
+                                                <td></td>
+
+                                                <td></td>
+                                            </tr>
+
+
+
+                                            <tr class=" part-list-totals">
+                                                <td colspan="7">Shipping:</td>
+                                                <td class="tr nowrap">$4.98</td>
+
+                                                <td></td>
+
+                                                <td></td>
+
+                                                <td></td>
+                                            </tr>
+
+
+
+                                            <tr class="total-price part-list-totals">
+                                                <td colspan="7">Total:</td>
+                                                <td class="tr nowrap">$734.79</td>
+
+                                                <td></td>
+
+                                                <td></td>
+
+                                                <td></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+
+                                    <div class="note">* Using <a href="/user_r/preferences/" rel="nofollow">your
+                                            selected merchants</a> and only including <a href="/user_r/preferences/"
+                                            rel="nofollow">nearby</a> in-store pickup prices)</div>
+
+
+                                    <div class="note">* Some physical dimension restrictions cannot (yet) be
+                                        automatically checked, such as cpu cooler / RAM clearance with modules using
+                                        tall heat spreaders.</div>
+
+
+                                </div>
+                            </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="drop drop1" id="drop4">
+        <div id="browse-parts-tray-container">
+            <div class="container">
+                <div class="browse-parts-tray">
+                    <div class="parts-tray-block-col core-parts">
+                        <div>
+                            <a href="/products/cpu" class="parts-tray-block parts-tray-heading"><img src="image/nav-cpu.png"
+                                    alt="CPU" />CPU</a>
+                            <a href="/products/cpu-cooler" class="parts-tray-block parts-tray-heading">
+                                <img src="image/nav-cpucooler.png" alt="CPU Cooler" />CPU Cooler
+                            </a>
+                            <a href="/products/motherboard" class="parts-tray-block parts-tray-heading">
+                                <img src="image/nav-motherboard.png" alt="Motherboard" />Motherboard
+                            </a>
+                            <a href="/products/memory" class="parts-tray-block parts-tray-heading">
+                                <img src="image/nav-memory.png" alt="Memory" />Memory
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/products/storage" class="parts-tray-block parts-tray-heading">
+                                <img src="image/nav-ssd.png" alt="Storage" />Storage
+                            </a>
+                            <a href="/products/gpu" class="parts-tray-block parts-tray-heading">
+                                <img src="image/nav-videocard.png" alt="Video Card" />Video Card
+                            </a>
+                            <a href="/products/powersupply" class="parts-tray-block parts-tray-heading">
+                                <img src="image/nav-powersupply.png" alt="Power Supply" />Power Supply
+                            </a>
+                            <a href="/products/pccase" class="parts-tray-block parts-tray-heading">
+                                <img src="image/nav-case.png" alt="Case" />Case
+                            </a>
+                        </div>
+                    </div>
+                    <div class="parts-tray-list-col parts-two">
+                        <ul>
+                            <li class="parts-tray-heading">Cooling</li>
+                            <li><a href="/products/pccase-fan">Case Fans</a></li>
+                            <li><a href="/products/fan-controller">Fan Controllers</a></li>
+                            <li><a href="/products/thermal-paste">Thermal Compound</a></li>
+                        </ul>
+                        <ul>
+                            <li class="parts-tray-heading">Drives</li>
+                            <li><a href="/products/optical-drive">Optical Drives</a></li>
+                        </ul>
+                        <ul>
+                            <li class="parts-tray-heading">Expansion</li>
+                            <li><a href="/products/sound-card">Sound Cards</a></li>
+                            <li><a href="/products/wired-network-card">Wired Networking</a></li>
+                            <li><a href="/products/wireless-network-card">Wireless Networking</a></li>
+                        </ul>
+                    </div>
+                    <div class="parts-tray-list-col parts-three">
+                        <ul>
+                            <li class="parts-tray-heading">Displays</li>
+                            <li><a href="/products/monitor">Monitors</a></li>
+                        </ul>
+                        <ul>
+                            <li class="parts-tray-heading">External Storage</li>
+                            <li><a href="/products/external-hard-drive">External Hard Drives</a></li>
+                        </ul>
+                        <ul>
+                            <li class="parts-tray-heading">Peripherals</li>
+                            <li><a href="/products/headphones">Headphones</a></li>
+                            <li><a href="/products/keyboard">Keyboards</a></li>
+                            <li><a href="/products/mouse">Mice</a></li>
+                            <li><a href="/products/speakers">Speakers</a></li>
+                            <li><a href="/products/ups">Uninterruptible Power Supplies</a></li>
+                        </ul>
+                    </div>
+                    <div class="parts-tray-list-col parts-three">
+                        <ul>
+                            <li class="parts-tray-heading">Software</li>
+                            <li><a href="/products/software/#W=1">Antivirus</a></li>
+                            <li><a href="/products/software/#W=8">Audio &amp; Video</a></li>
+                            <li><a href="/products/software/#W=2">Backup</a></li>
+                            <li><a href="/products/software/#W=3">Design &amp; Illustration</a></li>
+                            <li><a href="/products/software/#W=5">Internet Security</a></li>
+                            <li><a href="/products/software/#W=7">Office &amp; Productivity</a></li>
+                            <li><a href="/products/os">Operating Systems</a></li>
+                            <li><a href="/products/software/#W=6">Photography</a></li>
+                        </ul>
+                    </div>
+                    <div class="parts-tray-list-col parts-four">
+                    </div>
+                    <div class="parts-tray-col-clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="modal-footer">
+        <div class="container">
+            <div class="footer-branding">
+                <div class="copyright-notice">&copy;2018 PCPartPicker, LLC. All rights reserved.</div>
+                <div class="switch-to-mobile"><a href="?flavor=mobile">Switch to Mobile Version</a></div>
+
+
+            </div>
+            <ul class="footer-nav">
+                <h4>Sections</h4>
+                <li><a href="/build">System Builds</a></li>
+                <li><a href="/guide">Build Guides</a></li>
+                <li><a href="/builds">Completed Builds</a></li>
+                <li><a href="/products">Individual Parts</a></li>
+            </ul>
+            <ul class="footer-nav">
+                <h4>PCPP</h4>
+                <li><a href="/forums">Forums</a></li>
+                <li><a href="/products/pricedrop">Price Drops</a></li>
+                <li><a href="/trends">Price Trends</a></li>
+                <li><a href="/blog">PCPP Blog</a></li>
+            </ul>
+            <ul class="footer-nav">
+                <h4>PCPP</h4>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact &amp; Imprint</a></li>
+                <li><a href="/tos">Terms of Service</a></li>
+                <li><a href="/code-of-conduct">User Code of Conduct</a></li>
+                <li><a href="/code-of-conduct/industry-affiliate">Industry Code of Conduct</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/disclosure">Disclosure</a></li>
+            </ul>
+            <ul class="footer-nav">
+                <h4>Elsewhere</h4>
+                <li><a href="https://discord.gg/pcpartpicker">Discord</a></li>
+                <li><a href="https://www.facebook.com/pcpartpicker">Facebook</a></li>
+                <li><a href="https://instagram.com/pcpartpicker">Instagram</a></li>
+                <li><a href="https://twitch.tv/pcpartpicker">Twitch</a></li>
+                <li><a href="https://twitter.com/pcpartpicker">Twitter</a></li>
+                <li><a href="https://www.youtube.com/user/pcpartpicker">YouTube</a></li>
+            </ul>
+        </div>
+
+
+    </footer>
+    <script src="js/custom/app.js"></script>
+</body>
+
+</html>

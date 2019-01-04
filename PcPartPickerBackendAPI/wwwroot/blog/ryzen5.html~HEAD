@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+
+  <title>System Build</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="pcpp-header">
+        <a href="../index.html"><h1>PCPartPicker</h1></a>
+        <ul class="user-nav">
+
+          <li><a href="/accounts/login/">Log In</a></li>
+          <li><a href="/accounts/register/">Register</a></li>
+
+          <li>
+            <form method="post" action="/qapi/switch_country/" id="form_country_select">
+              <input type='hidden' name='csrfmiddlewaretoken' value='xCftgznkB2PeNRRq8Tf1Oqs8XEwKCrIzBaClXnKsCWxLQKu1x03eRNqh2g4E3qD7' />
+              <select id="country_select" class="language-selector flag-us" name="cc">
+                <option value="au">Australia</option>
+                <option value="be">Belgium</option>
+                <option value="ca">Canada</option>
+                <option value="de">Deutschland</option>
+                <option value="es">España</option>
+                <option value="fr">France</option>
+                <option value="in">India</option>
+                <option value="ie">Ireland</option>
+                <option value="it">Italia</option>
+                <option value="nl">Netherlands</option>
+                <option value="nz">New Zealand</option>
+                <option value="se">Sweden</option>
+                <option value="uk">United Kingdom</option>
+                <option value="us" selected="selected">United States</option>
+              </select>
+              <input type="hidden" name="url" value="/list/" id="form_country_select_url" />
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <nav>
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="primary-nav">
+            <a href="/list/" class="nav-build"><span>Start a</span> System Build</a>
+            <a href="/guide/" class="nav-guides"><span>View the</span> Build Guides</a>
+            <a href="/builds/" class="nav-builds"><span>See all</span> Completed Builds</a>
+            <a id="browse-parts-button" href="partList.html" class="nav-parts">
+              <span>Browse by</span>
+              Individual Parts
+              </a>
+           </div>
+
+          <div class="secondary-nav">
+            <div class="sub-links">
+              <a href="/products/pricedrop/">Price Drops</a><a href="/trends/">Price Trends</a><a href="/forums/">Forums</a><a href="/blog/">Blog</a>
+            </div>
+            <div class="search"><a href="/search/" class="search-parts"></a></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<div>
+ <div class="blog">
+  <div class="blog-header">
+    <div class="page-container">
+      <div class="title">
+        <div class="back-blog">
+          <a href="../index.html">Blog / </a>
+        </div>
+       <h1>AMD Ryzen 5 2600 CPU Review: Efficient And Affordable</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-details">
+   <div class="page-container">
+     <div class="column-wrapper">
+       <div class="left-column">
+         <div class="article">
+           <h2>Post</h2>
+           <div class="block">
+             <div class="markdown">
+               <img src="../image/amdryzen5-2600.jpg"/>
+               <p>
+                 <h3>Final Analysis</h3> <br>
+Much like AMD's attractive Ryzen 5 2600X, the Ryzen 5 2600 proves to be a well-rounded processor that sports many of the same selling points. It's a little bit slower right out of the box, but the 2600 also costs less and boasts a 30W-lower TDP. Similar to the Ryzen 7 2700X versus Ryzen 7 2700 story, you trade a bit of speed for a slightly lower price and a little less heat. They're different tools optimized for different applications. It just so happens that most enthusiasts favor higher benchmark results over a $20 savings or a bit less power consumption.
+<br><br>
+In that vein, the charts below plot performance using average frame rates and a geometric mean of the 99th percentile frame times, which we then convert into a FPS measurement. We also include price-to-performance charts that get split up to include CPUs-only and extra platform costs. For the models that don't come with a bundled cooler, we add an extra $25 for a basic heat sink. We also add $20 if overclocking requires a more expensive motherboard (as is the case for Z370).
+As our benchmark results suggested, Ryzen 5 2600's overclocked gaming performance is very competitive with a tuned Ryzen 5 2600X, both complemented by GeForce GTX 1080. The 2600 also fares well against Intel's Core i5-8600K, which doesn't come with a thermal solution, requires a Z-series motherboard for overclocking, and still sells for almost $70 more than the AMD chip. If you plan on overclocking, the Core i5-8600K does provide higher frame rates than any other Ryzen 5/Core i5 CPUs. But as you push higher resolutions and more demanding detail settings, the differences between processors shrink.
+<br><br>
+Intel's Core i5-8400, the least-expensive model we tested, is an impressive alternative for gaming. Like the Ryzen 5 2600, it comes with a bundled cooler and drops into value-oriented motherboards. As a result, it's priced somewhat similarly. The Core i5-8400 is our favorite choice for gamers on a budget. Although AMD's Ryzen 5 2600 can be faster after overclocking, you'll have to buy a bigger thermal solution to get there.
+</p>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <div class="right-column">
+         <h2>Recent Post</h2>
+         <ul>
+           <li><a href="blog/amdgaming.html">Great AMD Gaming Build</a></li>
+           <li><a href="blog/8700Kbenchmark.html">Intel Core i7-8700K Benchmarks</a></li>
+         </ul>
+       </div>
+   </div>
+  </div>
+</div>
+</div>
+</div>
+
+    <div class="drop">
+      <div id="browse-parts-tray-container">
+        <div class="container">
+          <div class="browse-parts-tray">
+            <div class="parts-tray-block-col core-parts">
+              <div>
+                <a href="/products/cpu/" class="parts-tray-block parts-tray-heading"><img src="image/nav-cpu.png" alt="CPU" />CPU</a>
+                <a href="/products/cpu-cooler/" class="parts-tray-block parts-tray-heading"><img src="image/nav-cpucooler.png" alt="CPU Cooler" />CPU Cooler</a>
+                <a href="/products/motherboard/" class="parts-tray-block parts-tray-heading"><img src="image/nav-motherboard.png" alt="Motherboard" />Motherboard</a>
+                <a href="/products/memory/" class="parts-tray-block parts-tray-heading"><img src="image/nav-memory.png" alt="Memory" />Memory</a>
+              </div>
+              <div>
+                <a href="/products/internal-hard-drive/" class="parts-tray-block parts-tray-heading"><img src="image/nav-ssd.png" alt="Storage" />Storage</a>
+                <a href="/products/video-card/" class="parts-tray-block parts-tray-heading"><img src="image/nav-videocard.png" alt="Video Card" />Video Card</a>
+                <a href="/products/power-supply/" class="parts-tray-block parts-tray-heading"><img src="image/nav-powersupply.png" alt="Power Supply" />Power Supply</a>
+                <a href="/products/case/" class="parts-tray-block parts-tray-heading"><img src="image/nav-case.png" alt="Case" />Case</a>
+              </div>
+            </div>
+            <div class="parts-tray-list-col parts-two">
+              <ul>
+                <li class="parts-tray-heading">Cooling</li>
+                <li><a href="/products/case-fan/">Case Fans</a></li>
+                <li><a href="/products/fan-controller/">Fan Controllers</a></li>
+                <li><a href="/products/thermal-paste/">Thermal Compound</a></li>
+              </ul>
+              <ul>
+                <li class="parts-tray-heading">Drives</li>
+                <li><a href="/products/optical-drive/">Optical Drives</a></li>
+              </ul>
+              <ul>
+                <li class="parts-tray-heading">Expansion</li>
+                <li><a href="/products/sound-card/">Sound Cards</a></li>
+                <li><a href="/products/wired-network-card/">Wired Networking</a></li>
+                <li><a href="/products/wireless-network-card/">Wireless Networking</a></li>
+              </ul>
+            </div>
+            <div class="parts-tray-list-col parts-three">
+              <ul>
+                <li class="parts-tray-heading">Displays</li>
+                <li><a href="/products/monitor/">Monitors</a></li>
+              </ul>
+              <ul>
+                <li class="parts-tray-heading">External Storage</li>
+                <li><a href="/products/external-hard-drive/">External Hard Drives</a></li>
+              </ul>
+              <ul>
+                <li class="parts-tray-heading">Peripherals</li>
+                <li><a href="/products/headphones/">Headphones</a></li>
+                <li><a href="/products/keyboard/">Keyboards</a></li>
+                <li><a href="/products/mouse/">Mice</a></li>
+                <li><a href="/products/speakers/">Speakers</a></li>
+                <li><a href="/products/ups/">Uninterruptible Power Supplies</a></li>
+              </ul>
+            </div>
+            <div class="parts-tray-list-col parts-three">
+              <ul>
+                <li class="parts-tray-heading">Software</li>
+                <li><a href="/products/software/#W=1">Antivirus</a></li>
+                <li><a href="/products/software/#W=8">Audio &amp; Video</a></li>
+                <li><a href="/products/software/#W=2">Backup</a></li>
+                <li><a href="/products/software/#W=3">Design &amp; Illustration</a></li>
+                <li><a href="/products/software/#W=5">Internet Security</a></li>
+                <li><a href="/products/software/#W=7">Office &amp; Productivity</a></li>
+                <li><a href="/products/os/">Operating Systems</a></li>
+                <li><a href="/products/software/#W=6">Photography</a></li>
+              </ul>
+            </div>
+            <div class="parts-tray-list-col parts-four">
+            </div>
+            <div class="parts-tray-col-clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="drop">
+      <div id="search-tray-container">
+        <div class="container">
+          <div class="search-tray search-box">
+            <form action="/search/" method="get">
+              <input type="hidden" name="cc" value="us" />
+              <input id="search_q" type="text" name="q" size="32" autocomplete="off" />
+              <input id="search_go" type="submit" value="Search" />
+            </form>
+            <div id="search_result"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="modal-footer">
+      <div class="container">
+        <div class="footer-branding">
+          <div class="copyright-notice">&copy;2018 PCPartPicker, LLC.  All rights reserved.</div>
+          <div class="switch-to-mobile"><a href="?flavor=mobile">Switch to Mobile Version</a></div>
+
+
+        </div>
+        <ul class="footer-nav">
+          <h4>Sections</h4>
+          <li><a href="/list/">System Builds</a></li>
+          <li><a href="/guide/">Build Guides</a></li>
+          <li><a href="/builds/">Completed Builds</a></li>
+          <li><a href="/products/">Individual Parts</a></li>
+        </ul>
+        <ul class="footer-nav">
+          <h4>PCPP</h4>
+          <li><a href="/forums/">Forums</a></li>
+          <li><a href="/products/pricedrop/">Price Drops</a></li>
+          <li><a href="/trends/">Price Trends</a></li>
+          <li><a href="/blog/">PCPP Blog</a></li>
+        </ul>
+        <ul class="footer-nav">
+          <h4>PCPP</h4>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact &amp; Imprint</a></li>
+          <li><a href="/tos/">Terms of Service</a></li>
+          <li><a href="/code-of-conduct/">User Code of Conduct</a></li>
+          <li><a href="/code-of-conduct/industry-affiliate/">Industry Code of Conduct</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/disclosure/">Disclosure</a></li>
+        </ul>
+        <ul class="footer-nav">
+          <h4>Elsewhere</h4>
+          <li><a href="https://discord.gg/pcpartpicker">Discord</a></li>
+          <li><a href="https://www.facebook.com/pcpartpicker">Facebook</a></li>
+          <li><a href="https://instagram.com/pcpartpicker">Instagram</a></li>
+          <li><a href="https://twitch.tv/pcpartpicker">Twitch</a></li>
+          <li><a href="https://twitter.com/pcpartpicker">Twitter</a></li>
+          <li><a href="https://www.youtube.com/user/pcpartpicker">YouTube</a></li>
+        </ul>
+      </div>
+      <!-- <div class="container">
+        <div class="pcpp-network">
+          <h4>PCPP Network</h4>
+          <div class="title-divider"></div>
+          <ul>
+            <li><a href="http://pcpartpicker.com" id="pcpp"></a></li>
+          </ul>
+        </div>
+      </div> -->
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+        $('.language-selector').customSelect();
+        $('span.customSelect').css('width', '');
+        $('span.customSelectInner').css('width', '');
+      });
+    </script>
+    <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable" tabindex="-1" role="dialog" aria-describedby="default_dialog" aria-labelledby="ui-id-1" style="display: none; position: relative;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">&nbsp;</span>
+      <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+      <span class="ui-button-text">close</span></button></div>
+    <div id="default_dialog" class="hidden-dialog ui-dialog-content ui-widget-content" style="display: block;"></div></div>
+  </body>
+  </html>

@@ -1,0 +1,636 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>System Build</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="pcpp-header">
+        <a href="/">
+          <h1>PCPartPicker</h1>
+        </a>
+        <ul class="user-nav">
+
+          <li><a href="/accounts/login">Log In</a></li>
+          <li><a href="/accounts/register">Register</a></li>
+
+          <li>
+            <form method="post" action="/qapi/switch_country" id="form_country_select">
+              <input type='hidden' name='csrfmiddlewaretoken' value='xCftgznkB2PeNRRq8Tf1Oqs8XEwKCrIzBaClXnKsCWxLQKu1x03eRNqh2g4E3qD7' />
+              <select id="country_select" class="language-selector flag-us" name="cc">
+                <option value="au">Australia</option>
+                <option value="be">Belgium</option>
+                <option value="ca">Canada</option>
+                <option value="de">Deutschland</option>
+                <option value="es">España</option>
+                <option value="fr">France</option>
+                <option value="in">India</option>
+                <option value="ie">Ireland</option>
+                <option value="it">Italia</option>
+                <option value="nl">Netherlands</option>
+                <option value="nz">New Zealand</option>
+                <option value="se">Sweden</option>
+                <option value="uk">United Kingdom</option>
+                <option value="us" selected="selected">United States</option>
+              </select>
+              <input type="hidden" name="url" value="/list" id="form_country_select_url" />
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <nav>
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="primary-nav">
+            <a href="/build" class="nav-build"><span>Make a</span> System Build</a>
+            <a href="buildGuides.html" class="nav-guides"><span>View the</span> Build Guides</a>
+            <a href="/builds" class="nav-builds"><span>See all</span> Completed Builds</a>
+            <a id="browse-parts-button" href="#" class="nav-parts"><span>Browse by</span>
+              Individual Parts<span class="nav-dropdown"></span></a>
+          </div>
+
+          <div class="secondary-nav">
+            <div class="sub-links">
+              <a href="/products/pricedrop">Price Drops</a><a href="/trends">Price Trends</a><a href="/forums">Forums</a><a
+                href="/blog">Blog</a>
+
+            </div>
+            <div class="search"><a href="/search" class="search-parts"></a></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div>
+
+    <div class="build-guides-hero">
+      <div class="container">
+        <div class="build-guides">
+
+
+          <div class="about-guides">
+            <h2>Build Guides</h2>
+            <p>Building your own PC and need ideas on where to get started? Explore our build guides, which cover
+              systems for all use-cases and budgets, or create your own and share it with our community.</p>
+            <a href="/guide/" class="btn-lgs">View the Build Guides</a>
+          </div>
+          <ul class="guide-cover">
+            <a href="" class="cover-link"></a>
+            <li>
+              <h4>Featured Guide</h4>
+            </li>
+            <li class="title"><a href="blog/ryzen5.html">Great AMD Gaming Build</a></li>
+            <li class="user-avatar"><a href=""><img src="image/avatar/ta.jpg" class="user-thumb-sm"></a> &nbsp by <a
+                href="">TuanAnh</a></li>
+            <br>
+            <li class="component">AMD Ryzen 5 2600</li>
+            <li class="component">Parametric Video Card (Chipset: GeForce GTX 1070; Length: 223 mm - 403 mm)</li>
+            <li class="component">NZXT H500 (Black) ATX Mid Tower</li>
+            <li class="price"><a href="" class="price">$1000</a></li>
+          </ul>
+          <ul class="guide-list">
+            <li class="guide">
+              <ul>
+                <a href="/guide/J6ZxFT/entry-level-intel-gaming-build" class="build-link"></a>
+                <li class="title">
+
+                  <a href="/guide/J6ZxFT/entry-level-intel-gaming-build" class="price">$490.27</a>
+
+                  <a href="/guide/J6ZxFT/entry-level-intel-gaming-build">Entry Level Intel Gaming Build</a>
+                </li>
+                <li class="component">Intel Core i3-8100</li>
+                <li class="component">Parametric Video Card (Chipset: Radeon RX 570)</li>
+                <li class="component">Cougar MX330-G ATX Mid Tower</li>
+                <li class="owner">
+                  by <a href="/user/ThoughtA/">ThoughtA</a>
+                </li>
+              </ul>
+
+            </li>
+
+            <li class="guide">
+              <ul>
+                <a href="/guide/PRXscf/excellent-intel-gaming-build" class="build-link"></a>
+                <li class="title">
+
+                  <a href="/guide/PRXscf/excellent-intel-gaming-build" class="price">$1230.12</a>
+
+                  <a href="/guide/PRXscf/excellent-intel-gaming-build">Excellent Intel Gaming Build</a>
+                </li>
+                <li class="component">Intel Core i5-9600K</li>
+                <li class="component">Parametric Video Card (Chipset: GeForce RTX 2070)</li>
+                <li class="component">NZXT H500 (Black) ATX Mid Tower</li>
+                <li class="owner">
+                  by <a href="/user/manirelli/">manirelli</a>
+                </li>
+              </ul>
+
+            </li>
+
+            <li class="guide">
+              <ul>
+                <a href="/guide/yjkcCJ/magnificent-amd-gaming-build" class="build-link"></a>
+                <li class="title">
+
+                  <a href="/guide/yjkcCJ/magnificent-amd-gaming-build" class="price">$1625.11</a>
+
+                  <a href="/guide/yjkcCJ/magnificent-amd-gaming-build">Magnificent AMD Gaming Build</a>
+                </li>
+                <li class="component">AMD Ryzen 7 2700X</li>
+                <li class="component">Parametric Video Card (Chipset: GeForce RTX 2080; Length: 224 mm - 403 mm)</li>
+                <li class="component">Fractal Design Define R6 Blackout TG ATX Mid Tower</li>
+                <li class="owner">
+
+                  by <a href="/user/ThoughtA/">ThoughtA</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="details">
+      <div class="container">
+        <div class="column-wrapper">
+          <div class="index-left-column">
+            <div class="completed-builds">
+              <h2 class="h2">Completed Builds</h2>
+              <div class="featured-build">
+                <h4>Featured Build</h4>
+
+                <a href="/b/DYtgXL">
+                  <div class="image-triple-group">
+                    <div class="image-triple-group-left">
+                      <img class="image-one1" src="image/user-image/238285.d5a4655b5f5fd3e2b566dabd4fbf9a62.256c.jpg" />
+                    </div>
+                    <div class="image-triple-group-right"><img src="image/user-image/238285.54ab4d29895f3035ab0268b77a886e63.256c.jpg"
+                        class="image-two1" /><img src="image/user-image/238285.8083a7e04a5baaf2ea1bd2fbf2ce5216.256c.jpg"
+                        class="image-three1" /></div>
+                  </div>
+                </a>
+                <div>
+                  <ul class="build">
+                    <li class="title"><a href="/b/DYtgXL">Purple_Rain</a></li>
+                    <li class="owner">by <a href="/user/ov3rvolt/">ov3rvolt</a></li>
+                    <li class="component">Intel Core i5-7600K</li>
+                    <li class="component">GeForce GTX 1080 Ti</li>
+
+                    <li class="price"><a href="/b/DYtgXL">$3678.30+</a></li>
+
+                    <ul>
+
+                    </ul>
+                  </ul>
+                </div>
+
+              </div>
+              <ul class="build-list">
+
+                <div class="build">
+                  <ul>
+                    <a href="/b/ZnFtt6" class="build-link"></a>
+                    <li class="title">
+
+                      <a href="/b/ZnFtt6" class="price">$2333.54+</a>
+
+                      <a href="/b/ZnFtt6">2018 Upgrades from a 2015 machine</a>
+                    </li>
+
+                    <li class="image">
+                      <a href="/b/ZnFtt6"><img src="image/user-image/238730.3738f866d33b943acd4c4da6b69e9721.256c.jpg"></a>
+                    </li>
+                    <li class="component">Intel Core i7-4790K</li>
+                    <li class="component">GeForce GTX 1070</li>
+                    <li class="owner">
+
+                      by <a href="/user/hepha/">hepha</a>
+                    </li>
+                  </ul>
+
+                </div>
+
+                <div class="build">
+                  <ul>
+                    <a href="/b/TvCbt6" class="build-link"></a>
+                    <li class="title">
+
+                      <a href="/b/TvCbt6" class="price">$916.35</a>
+
+                      <a href="/b/TvCbt6">Gaming Rig Give Away...</a>
+                    </li>
+
+                    <li class="image">
+                      <a href="/b/TvCbt6"><img src="image/user-image/238726.d06a51e7a6159ba8c4c4a9ef6726817a.256c.jpg"></a>
+                    </li>
+                    <li class="component">AMD Ryzen 7 1700X</li>
+                    <li class="component">GeForce GTX 1060 3GB</li>
+                    <li class="owner">
+
+                      by <a href="/user/SpaceGoat78/">SpaceGoat78</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="build">
+                  <ul>
+                    <a href="/b/zmKBD3" class="build-link"></a>
+                    <li class="title">
+
+                      <a href="/b/zmKBD3" class="price">$1007.81+</a>
+
+                      <a href="/b/zmKBD3">i5 8600k gtx 1080</a>
+                    </li>
+
+                    <li class="image">
+                      <a href="/b/zmKBD3"><img src="image/user-image/238722.3dfcc88516ffe283fee4cb1f159ac82f.256c.jpg"></a>
+                    </li>
+                    <li class="component">Intel Core i5-8600K</li>
+                    <li class="component">GeForce GTX 1080</li>
+                    <li class="owner">
+
+                      by <a href="/user/LeoGamingXD/">LeoGamingXD</a>
+                    </li>
+                  </ul>
+
+                </div>
+
+                <div class="build">
+                  <ul>
+                    <a href="/b/j8sZxr" class="build-link"></a>
+                    <li class="title">
+
+                      <a href="/b/j8sZxr" class="price">$1628.47</a>
+
+                      <a href="/b/j8sZxr">Small Quiet High-Power-Density</a>
+                    </li>
+
+                    <li class="image">
+                      <a href="/b/j8sZxr"><img src="image/user-image/238720.d900c0f98352046a6cb4d19737a8fc8b.256c.jpg"></a>
+                    </li>
+                    <li class="component">AMD Ryzen 7 2700X</li>
+                    <li class="component">Radeon RX VEGA 56</li>
+                    <li class="owner">
+
+                      by <a href="/user/jmfife/">jmfife</a>
+                    </li>
+                  </ul>
+
+                </div>
+
+                <div class="build">
+                  <ul>
+                    <a href="/b/b4mqqs" class="build-link"></a>
+                    <li class="title">
+
+                      <a href="/b/b4mqqs" class="price">$1274.23</a>
+
+                      <a href="/b/b4mqqs">First build</a>
+                    </li>
+
+                    <li class="image">
+                      <a href="/b/b4mqqs"><img src="image/user-image/238719.5189078bdf393a1078c1a402933f4f52.256c.jpg"></a>
+                    </li>
+                    <li class="component">AMD Ryzen 5 2600</li>
+                    <li class="component">GeForce GTX 1050 Ti</li>
+                    <li class="owner">
+
+                      by <a href="/user/Thomas4972/">Thomas4972</a>
+                    </li>
+                  </ul>
+
+                </div>
+
+                <div class="build">
+                  <ul>
+                    <a href="/b/xhxG3C" class="build-link"></a>
+                    <li class="title">
+
+                      <a href="/b/xhxG3C" class="price">$1569.52+</a>
+
+                      <a href="/b/xhxG3C">My new Ryzen build</a>
+                    </li>
+
+                    <li class="image">
+                      <a href="/b/xhxG3C"><img src="image/user-image/238715.77b1c5456dbc479299fb018d9fd80841.256c.jpg"></a>
+                    </li>
+                    <li class="component">AMD Ryzen 7 2700X</li>
+                    <li class="component">GeForce GTX 1080</li>
+                    <li class="owner">
+
+                      by <a href="/user/JoshDank/">JoshDank</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </ul>
+
+            </div>
+            <div class="more-blog-posts">
+              <a href="/blog" class="btn-lgs">See More Blog Posts</a>
+            </div>
+            <!-- blog -->
+          </div>
+          <div class="index-right-column">
+            <div class="blog">
+              <h2 class="h2">Blog</h2>
+              <div class="posts">
+                <div>
+                  <div class="blog-post">
+
+                    <a href="/blog/158/charity-water-completion-report-10" class="post-image"><img class="blog-image"
+                        src="image/GeForce RTX 2080.jpg"></a>
+
+                    <div class="details">
+                      <h3 class="title"><a href="/blog/158/charity-water-completion-report-10">charity: water
+                          Completion
+                          Report #10</a></h3>
+                      <p class="meta">Posted Oct. 23, 2018 by <a href="/user/philip/">philip</a></p>
+                      <div class="markdown">
+                        <p>Our tenth <a href="http://charitywater.org">charity: water</a> completion report arrived!
+                          Thanks to your support, we were able to fund water projects serving 887 people in Rwanda.
+                          More
+                          than half of the population of Rwanda lack access to clean and safe water. ...</p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-post">
+
+                  <a href="/blog/157/charity-water-completion-report-9" class="post-image"><img class="blog-image" src="image/GeForce RTX 2080.jpg"></a>
+
+                  <div class="details">
+                    <h3 class="title"><a href="/blog/157/charity-water-completion-report-9">charity: water Completion
+                        Report #9</a></h3>
+                    <p class="meta">Posted Oct. 4, 2018 by <a href="/user/philip/">philip</a></p>
+                    <div class="markdown">
+                      <p>Our ninth <a href="http://charitywater.org">charity: water</a> completion report arrived!
+                        Thanks to your support, we were able to fund water projects serving 2,275 people in Ethiopia.
+                        ...</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="blog-post">
+
+                <a href="/blog/156/geforce-rtx-2080ti-benchmarks" class="post-image"><img class="blog-image" src="image/GeForce RTX 2080.jpg"></a>
+
+                <div class="details">
+                  <h3 class="title"><a href="/blog/156/geforce-rtx-2080ti-benchmarks">NVIDIA GeForce RTX 2080 Ti
+                      Benchmarks</a></h3>
+                  <p class="meta">Posted Sept. 19, 2018 by <a href="/user/BoyScout/">BoyScout</a></p>
+                  <div class="markdown">
+                    <p>The NVIDIA GeForce RTX 2080 and 2080 Ti are officially available. MSI sent us their new <a href="/product/KDXnTW/msi-geforce-rtx-2080-ti-11gb-duke-video-card-rtx-2080-ti-duke-11g-oc">GeForce
+                        RTX 2080 Ti DUKE</a> to find out how the new RTX 2080 Ti compares to the previous generation
+                      cards.</p>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="blog-post">
+
+                <a href="/blog/154/fractal-design-meshify-c-mini-build" class="post-image"><img class="blog-image" src="image/GeForce RTX 2080.jpg"></a>
+
+                <div class="details">
+                  <h3 class="title"><a href="/blog/154/fractal-design-meshify-c-mini-build">Fractal Design Meshify C
+                      Mini / X399 mATX Build</a></h3>
+                  <p class="meta">Posted March 30, 2018 by <a href="/user/BoyScout/">BoyScout</a></p>
+                  <div class="markdown">
+                    <p>With <a href="/product/X2kj4D/asrock-x399m-taichi-micro-atx-tr4-motherboard-x399m-taichi">ASRock's
+                        X399M Taichi</a> motherboard ready to take Ryzen Threadripper to smaller spaces, we try to
+                      squeeze as much power as we can into an Fractal Design's new micro-ATX <a href="/product/JsKcCJ/fractal-design-meshify-c-mini-dark-tg-microatx-mini-tower-case-fd-ca-mesh-c-mini-bko-tgd">Meshify
+                        C Mini</a> case. Check out our latest video to see how the build came together.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+        </div> <!-- blog -->
+
+      </div> <!-- right column -->
+    </div> <!-- column wrapper -->
+  </div> <!-- page container -->
+  </div> <!-- end of details -->
+
+  </div>
+  <div class="drop drop1" id="drop5">
+    <div id="browse-parts-tray-container">
+      <div class="container">
+        <div class="browse-parts-tray">
+          <div class="parts-tray-block-col core-parts">
+            <div>
+              <a href="/products/cpu" class="parts-tray-block parts-tray-heading"><img src="image/nav-cpu.png" alt="CPU" />CPU</a>
+              <a href="/products/cpu-cooler" class="parts-tray-block parts-tray-heading"><img src="image/nav-cpucooler.png"
+                  alt="CPU Cooler" />CPU Cooler</a>
+              <a href="/products/motherboard" class="parts-tray-block parts-tray-heading"><img src="image/nav-motherboard.png"
+                  alt="Motherboard" />Motherboard</a>
+              <a href="/products/memory" class="parts-tray-block parts-tray-heading"><img src="image/nav-memory.png"
+                  alt="Memory" />Memory</a>
+            </div>
+            <div>
+              <a href="/products/storage" class="parts-tray-block parts-tray-heading"><img src="image/nav-ssd.png" alt="Storage" />Storage</a>
+              <a href="/products/gpu" class="parts-tray-block parts-tray-heading"><img src="image/nav-videocard.png"
+                  alt="Video Card" />Video Card</a>
+              <a href="/products/powersupply" class="parts-tray-block parts-tray-heading"><img src="image/nav-powersupply.png"
+                  alt="Power Supply" />Power Supply</a>
+              <a href="/products/pccase" class="parts-tray-block parts-tray-heading"><img src="image/nav-case.png" alt="Case" />Case</a>
+            </div>
+          </div>
+          <div class="parts-tray-list-col parts-two">
+            <ul>
+              <li class="parts-tray-heading">Cooling</li>
+              <li><a href="/products/case-fan">Case Fans</a></li>
+              <li><a href="/products/fan-controller">Fan Controllers</a></li>
+              <li><a href="/products/thermal-paste">Thermal Compound</a></li>
+            </ul>
+            <ul>
+              <li class="parts-tray-heading">Drives</li>
+              <li><a href="/products/optical-drive">Optical Drives</a></li>
+            </ul>
+            <ul>
+              <li class="parts-tray-heading">Expansion</li>
+              <li><a href="/products/sound-card">Sound Cards</a></li>
+              <li><a href="/products/wired-network-card">Wired Networking</a></li>
+              <li><a href="/products/wireless-network-card">Wireless Networking</a></li>
+            </ul>
+          </div>
+          <div class="parts-tray-list-col parts-three">
+            <ul>
+              <li class="parts-tray-heading">Displays</li>
+              <li><a href="/products/monitor">Monitors</a></li>
+            </ul>
+            <ul>
+              <li class="parts-tray-heading">External Storage</li>
+              <li><a href="/products/external-hard-drive">External Hard Drives</a></li>
+            </ul>
+            <ul>
+              <li class="parts-tray-heading">Peripherals</li>
+              <li><a href="/products/headphones">Headphones</a></li>
+              <li><a href="/products/keyboard">Keyboards</a></li>
+              <li><a href="/products/mouse">Mice</a></li>
+              <li><a href="/products/speakers">Speakers</a></li>
+              <li><a href="/products/ups">Uninterruptible Power Supplies</a></li>
+            </ul>
+          </div>
+          <div class="parts-tray-list-col parts-three">
+            <ul>
+              <li class="parts-tray-heading">Software</li>
+              <li><a href="/products/software/#W=1">Antivirus</a></li>
+              <li><a href="/products/software/#W=8">Audio &amp; Video</a></li>
+              <li><a href="/products/software/#W=2">Backup</a></li>
+              <li><a href="/products/software/#W=3">Design &amp; Illustration</a></li>
+              <li><a href="/products/software/#W=5">Internet Security</a></li>
+              <li><a href="/products/software/#W=7">Office &amp; Productivity</a></li>
+              <li><a href="/products/os">Operating Systems</a></li>
+              <li><a href="/products/software/#W=6">Photography</a></li>
+            </ul>
+          </div>
+          <div class="parts-tray-list-col parts-four">
+          </div>
+          <div class="parts-tray-col-clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drop">
+    <div id="search-tray-container">
+      <div class="container">
+        <div class="search-tray search-box">
+          <form action="/search" method="get">
+            <input type="hidden" name="cc" value="us" />
+            <input id="search_q" type="text" name="q" size="32" autocomplete="off" />
+            <input id="search_go" type="submit" value="Search" />
+          </form>
+          <div id="search_result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="modal-footer">
+    <div class="container">
+      <div class="footer-branding">
+        <div class="copyright-notice">&copy;2018 PCPartPicker, LLC. All rights reserved.</div>
+        <div class="switch-to-mobile"><a href="?flavor=mobile">Switch to Mobile Version</a></div>
+
+
+      </div>
+      <ul class="footer-nav">
+        <h4>Sections</h4>
+        <li><a href="/build">System Builds</a></li>
+        <li><a href="/guide">Build Guides</a></li>
+        <li><a href="/builds">Completed Builds</a></li>
+        <li><a href="/products">Individual Parts</a></li>
+      </ul>
+      <ul class="footer-nav">
+        <h4>PCPP</h4>
+        <li><a href="/forums">Forums</a></li>
+        <li><a href="/products/pricedrop">Price Drops</a></li>
+        <li><a href="/trends">Price Trends</a></li>
+        <li><a href="/blog">PCPP Blog</a></li>
+      </ul>
+      <ul class="footer-nav">
+        <h4>PCPP</h4>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact &amp; Imprint</a></li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/code-of-conduct">User Code of Conduct</a></li>
+        <li><a href="/code-of-conduct/industry-affiliate">Industry Code of Conduct</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/disclosure">Disclosure</a></li>
+      </ul>
+      <ul class="footer-nav">
+        <h4>Elsewhere</h4>
+        <li><a href="https://discord.gg/pcpartpicker">Discord</a></li>
+        <li><a href="https://www.facebook.com/pcpartpicker">Facebook</a></li>
+        <li><a href="https://instagram.com/pcpartpicker">Instagram</a></li>
+        <li><a href="https://twitch.tv/pcpartpicker">Twitch</a></li>
+        <li><a href="https://twitter.com/pcpartpicker">Twitter</a></li>
+        <li><a href="https://www.youtube.com/user/pcpartpicker">YouTube</a></li>
+      </ul>
+    </div>
+    <!-- <div class="container">
+        =======
+        <ul class="footer-nav">
+          <h4>Sections</h4>
+          <li><a href="/list/">System Builds</a></li>
+          <li><a href="/guide/">Build Guides</a></li>
+          <li><a href="/builds/">Completed Builds</a></li>
+          <li><a href="/products/">Individual Parts</a></li>
+        </ul>
+        <ul class="footer-nav">
+          <h4>PCPP</h4>
+          <li><a href="/forums/">Forums</a></li>
+          <li><a href="/products/pricedrop/">Price Drops</a></li>
+          <li><a href="/trends/">Price Trends</a></li>
+          <li><a href="/blog/">PCPP Blog</a></li>
+        </ul>
+        <ul class="footer-nav">
+          <h4>PCPP</h4>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact &amp; Imprint</a></li>
+          <li><a href="/tos/">Terms of Service</a></li>
+          <li><a href="/code-of-conduct/">User Code of Conduct</a></li>
+          <li><a href="/code-of-conduct/industry-affiliate/">Industry Code of Conduct</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/disclosure/">Disclosure</a></li>
+        </ul>
+        <ul class="footer-nav">
+          <h4>Elsewhere</h4>
+          <li><a href="https://discord.gg/pcpartpicker">Discord</a></li>
+          <li><a href="https://www.facebook.com/pcpartpicker">Facebook</a></li>
+          <li><a href="https://instagram.com/pcpartpicker">Instagram</a></li>
+          <li><a href="https://twitch.tv/pcpartpicker">Twitch</a></li>
+          <li><a href="https://twitter.com/pcpartpicker">Twitter</a></li>
+          <li><a href="https://www.youtube.com/user/pcpartpicker">YouTube</a></li>
+        </ul>
+  </div>
+   <div class="container">
+>>>>>>> ntanh-develop
+      <div class="pcpp-network">
+        <h4>PCPP Network</h4>
+        <div class="title-divider"></div>
+        <ul>
+          <li><a href="http://pcpartpicker.com" id="pcpp"></a></li>
+        </ul>
+      </div>
+    </div> -->
+
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/js/custom/app.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.language-selector').customSelect();
+      $('span.customSelect').css('width', '');
+      $('span.customSelectInner').css('width', '');
+    });
+  </script>
+</body>
+
+</html>
